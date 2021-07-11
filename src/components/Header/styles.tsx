@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { themes } from '../../../styles/themes';
 
 interface HeaderStyledProps {
-    theme: boolean;
+    theme?: object;
     sidebarHidden?: boolean;
     children?: ReactNode;
 }
@@ -22,10 +22,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
     align-items: center;
     justify-content: space-between;
 
-    background-color: ${props => props.theme === true
-        ? themes.secondary.background
-        : themes.default.background
-    };
+    background-color: ${props => props.theme.background};
 
     button {
 
@@ -37,10 +34,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
         .hamburger .line{
             width: 35px;
             height: 5px;
-            background-color: ${props => props.theme === true
-        ? themes.default.background
-        : themes.secondary.background
-    };
+            background-color: ${props => props.theme.background};
             display: block;
             margin: 8px auto;
             -webkit-transition: all 0.3s ease-in-out;
@@ -106,13 +100,10 @@ export const Logo = styled.h2<HeaderStyledProps>`
     font-size: 1.5rem;
     line-height: 1rem;
 
-    color: ${props => props.theme === true
-        ? themes.default.background
-        : themes.secondary.background
-    };
+    color: ${props => props.theme.font.color.primary};
 
     span{
-        color: ${themes.default.font.color.secondary}
+        color: ${props => props.theme.font.color.spanDot};
     }
 
     @media (min-width: 768px){
@@ -132,11 +123,7 @@ export const Nav = styled.nav<HeaderStyledProps>`
     padding-top: 60px;
     overflow-x: hidden;
 
-    background-color: ${props => props.theme === true
-        ? themes.secondary.background
-        : themes.default.background
-
-    };
+    background-color: ${props => props.theme.background};
 
     display: flex;
     flex-direction: column;
@@ -189,7 +176,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
             position: relative;
             overflow:hidden;
 
-            color: ${props => props.theme === true ? themes.default.background : themes.secondary.background};
+            color: ${props => props.theme.font.color.primary};
             
             &:after{
                 content: '';

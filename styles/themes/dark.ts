@@ -6,7 +6,7 @@ export default {
     font: {
         color: {
             primary: "#fff",
-            secondary: "#91F9E5",
+            spanDot: "#91F9E5",
             tertiary: '#0b246e',
             quaternary: '#0e0e0e'
         },

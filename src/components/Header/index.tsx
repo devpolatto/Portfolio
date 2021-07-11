@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Link from 'next/link';
+
+import { ThemeContext } from 'styled-components';
 
 import { HeaderStyled, Nav, NavItems, Logo } from './styles';
 
 import { useTheme } from '../../hooks/useTheme';
 
-const Header: React.FC = () => {
+type HeaderType = {
+    theme: object;
+    handleTheme: () => void;
+}
+
+function Header({ theme, handleTheme }: HeaderType) {
+
+    // const themeSettings = useContext(ThemeContext)
 
     const [isOpen, setIsOpen] = useState(true);
     const [isActiveButton, setIsActiveButton] = useState(false);
-    const { theme, handleSetTheme } = useTheme();
+    // const { theme, handleSetTheme } = useTheme();
 
     function showSideBar() {
         isOpen === false ? setIsOpen(true) : setIsOpen(false)
@@ -18,8 +27,8 @@ const Header: React.FC = () => {
     }
 
     return (
-        <HeaderStyled theme={theme}>
-            <Logo theme={theme} className="logo">
+        <HeaderStyled>
+            <Logo className="logo">
                 Polatto<span>.</span>dev
             </Logo>
             <button onClick={showSideBar}>
@@ -31,14 +40,14 @@ const Header: React.FC = () => {
                     <span className="line"></span>
                 </div>
             </button>
-            <Nav sidebarHidden={isOpen} theme={theme}>
-                <NavItems theme={theme}>
+            <Nav sidebarHidden={isOpen} >
+                <NavItems >
                     <li><Link href="/">Inicio</Link></li>
                     <li><Link href="#about-me">Skills</Link></li>
                     <li><Link href="/projects">Projects</Link></li>
                     <li><Link href="/contact">Contato</Link></li>
                     <div className="checkbox">
-                        <input onClick={handleSetTheme} type="checkbox" id="switch" />
+                        <input onClick={() => handleTheme()} type="checkbox" id="switch" />
                         <label htmlFor="switch" />
                     </div>
                 </NavItems>
