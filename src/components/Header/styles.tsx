@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { themes } from '../../../styles/themes';
+// import { themes } from '../../../styles/themes';
 
 interface HeaderStyledProps {
     theme?: object;
@@ -185,7 +185,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
                 left: 50%;
                 width: 0;
                 height: 4px;
-                background: ${themes.default.font.color.secondary};
+                background: ${props => props.theme.font.color.spanDot};
                 border-radius: 90px;
                 transition: 0.5s;
             }
@@ -247,7 +247,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
         }
 
         input:checked + label {
-        background: ${themes.default.font.color.tertiary};
+        background: ${props => props.theme.font.color.activeSwitchTheme};
         }
 
         input:checked + label:after {
