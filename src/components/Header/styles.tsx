@@ -34,7 +34,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
         .hamburger .line{
             width: 35px;
             height: 5px;
-            background-color: ${props => props.theme.background};
+            background-color: ${props => props.theme.text_primary};
             display: block;
             margin: 8px auto;
             -webkit-transition: all 0.3s ease-in-out;
