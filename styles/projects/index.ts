@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding-top: 100px;
+  padding: 100px 0 16px 0 ;
 `;
 
 export const ProjectGrid = styled.div`
@@ -71,16 +71,22 @@ export const ProjectGrid = styled.div`
 
 `
 
-export const Project = styled.div`
+export const Project = styled.a`
     width: 100%;
     height: 140px;
 
     display: flex;
     justify-content: space-between;
-    border: 2px solid ${props => props.theme.border_card_project};
     border-radius: 8px;
 
-    background-color: #1e0b32;
+    text-decoration: none;
+
+    background-color: ${props => props.theme.cardbox};
+
+    -webkit-box-shadow: 0px 9px 11px 0px rgba(0,0,0,0.8); 
+    box-shadow: 0px 9px 11px 0px rgba(0,0,0,0.8);
+
+    transition: .2s ease-in-out 0s;
 
     img{
         width: 250px;
@@ -89,8 +95,12 @@ export const Project = styled.div`
 
     @media (min-width: 768px){
         width: 600px;
-        height: 280px;
+        height: 250px;
         border-radius: 8px;
+
+        &:hover{
+            transform: scale(0.9);
+        }
     }
 `
 
@@ -102,17 +112,22 @@ export const ProjectDescription = styled.div`
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 0.5rem;
 
     border-radius: 8px 0 0 8px;
+
+    @media (min-width: 768px){
+        gap: 1rem;
+    }
 
 `
 
 export const ProjectTitle = styled.div`
-    color: #fff;
+    color: ${props => props.theme.text_primary};
 
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
 
     @media (min-width: 768px){
         font-size: 2rem;
@@ -121,9 +136,7 @@ export const ProjectTitle = styled.div`
 `
 
 export const Description = styled.div`
-    color: #fff;
-
-    
+    color: ${props => props.theme.text_primary};
 
     max-width: 90%;
     word-wrap: break-word;
@@ -132,24 +145,6 @@ export const Description = styled.div`
 
     white-space: wrap;
     text-overflow: clip ellipsis;
-
-    a{
-        text-decoration: none;
-
-        width: 20px;
-        height: 20px;
-
-        .icon-open-project{
-            width: 100%;
-            height: 100%;
-
-            &:hover{
-                color: red;
-            }
-        }
-
-
-    }
 
     @media (min-width: 768px){
         font-size: 1rem;

@@ -19,24 +19,19 @@ const Projects: React.FC = () => {
         <Container>
             <Title text="Projetos" />
             <ProjectGrid>
-                <Project>
+                <Project href="https://github.com/devpolatto/Letmeask_NLW-6/#readme" target="_blank">
                     <ProjectDescription>
                         <ProjectTitle>Letme Ask</ProjectTitle>
                         <Description>
                             This is a project developed during Next Level Week # 6, presented by @Rocketseat.
                         </Description>
-                        <ProjectLink>
-                            <a href="https://github.com/devpolatto/Letmeask_NLW-6/#readme" target="_blank">
-                                <FaExternalLinkAlt className="icon-open-project" color="#fff" />
-                            </a>
-                        </ProjectLink>
                     </ProjectDescription>
                     <ProjectPreview>
                         <img src="https://github.com/devpolatto/Letmeask_NLW-6/raw/master/.github/Capa.png" alt="" />
                     </ProjectPreview>
                 </Project>
 
-                <Project>
+                <Project href="https://github.com/devpolatto/PlantManager_NLW5/#readme" target="_blank">
                     <ProjectDescription>
                         <ProjectTitle>Plant Manager</ProjectTitle>
                         <Description>
@@ -44,18 +39,13 @@ const Projects: React.FC = () => {
                             PlantManager is an application developed in order to help people who have plants
                             at home to remember to water them.
                         </Description>
-                        <ProjectLink>
-                            <a href="https://github.com/devpolatto/PlantManager_NLW5/#readme" target="_blank">
-                                <FaExternalLinkAlt className="icon-open-project" color="#fff" />
-                            </a>
-                        </ProjectLink>
                     </ProjectDescription>
                     <ProjectPreview>
                         <img src="https://github.com/devpolatto/PlantManager_NLW5/raw/main/.github/plantmanager-preview.png" alt="" />
                     </ProjectPreview>
                 </Project>
 
-                <Project>
+                <Project href="https://github.com/devpolatto/Move.it_NLW4/#readme" target="_blank">
                     <ProjectDescription>
                         <ProjectTitle>Plant Manager</ProjectTitle>
                         <Description>
@@ -63,14 +53,33 @@ const Projects: React.FC = () => {
                             PlantManager is an application developed in order to help people who have plants
                             at home to remember to water them.
                         </Description>
-                        <ProjectLink>
-                            <a href="https://github.com/devpolatto/Move.it_NLW4/#readme" target="_blank">
-                                <FaExternalLinkAlt className="icon-open-project" color="#fff" />
-                            </a>
-                        </ProjectLink>
                     </ProjectDescription>
                     <ProjectPreview>
                         <img src="https://www.luiztools.com.br/wp-content/uploads/2020/06/reactJS.png" alt="" />
+                    </ProjectPreview>
+                </Project>
+
+                <Project href="https://github.com/devpolatto/Letmeask_NLW-6/#readme" target="_blank">
+                    <ProjectDescription>
+                        <ProjectTitle>Letme Ask</ProjectTitle>
+                        <Description>
+                            This is a project developed during Next Level Week # 6, presented by @Rocketseat.
+                        </Description>
+                    </ProjectDescription>
+                    <ProjectPreview>
+                        <img src="https://github.com/devpolatto/Letmeask_NLW-6/raw/master/.github/Capa.png" alt="" />
+                    </ProjectPreview>
+                </Project>
+
+                <Project href="https://github.com/devpolatto/Letmeask_NLW-6/#readme" target="_blank">
+                    <ProjectDescription>
+                        <ProjectTitle>Letme Ask</ProjectTitle>
+                        <Description>
+                            This is a project developed during Next Level Week # 6, presented by @Rocketseat.
+                        </Description>
+                    </ProjectDescription>
+                    <ProjectPreview>
+                        <img src="https://github.com/devpolatto/Letmeask_NLW-6/raw/master/.github/Capa.png" alt="" />
                     </ProjectPreview>
                 </Project>
             </ProjectGrid>

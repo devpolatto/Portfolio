@@ -9,5 +9,5 @@ export default {
     bestColorTheme: "#91F9E5",
     activeSwitchTheme: '#0b246e',
     title_section: '#91F9E5',
-    border_card_project: '#91F9E5'
+    cardbox: '#1e0b32'
 }
