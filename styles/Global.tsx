@@ -22,5 +22,4 @@ export const GlobalStyled = createGlobalStyle`
         align-items: center;
         justify-content: space-between;
     }
-
 `;

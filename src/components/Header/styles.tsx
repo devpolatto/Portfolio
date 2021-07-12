@@ -16,7 +16,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
     top: 0;
     z-index: 1;
 
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
         .hamburger .line{
             width: 35px;
             height: 5px;
-            background-color: ${props => props.theme.background};
+            background-color: ${props => props.theme.text_primary};
             display: block;
             margin: 8px auto;
             -webkit-transition: all 0.3s ease-in-out;
@@ -88,7 +88,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
 
 
     @media (min-width: 768px) {
-        padding: 1rem 1rem;
+        padding: 0.8rem 1rem;
 
         justify-content: space-between;
 
