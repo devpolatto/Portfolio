@@ -38,7 +38,7 @@ export const Cover = styled.div<HomeProps>`
 
       .hello{
         line-height: 1rem;
-        color: ${props => props.theme.font.color.primary};
+        color: ${props => props.theme.text_primary};
       }
 
       .name{
@@ -46,16 +46,16 @@ export const Cover = styled.div<HomeProps>`
         font-family: 'Roboto';
         font-weight: 700;
         line-height: 3rem;
-        color: ${props => props.theme.font.color.CoverName};
+        color: ${props => props.theme.CoverName};
       }
 
       .office{
         line-height: 1rem;
-        color: ${props => props.theme.font.color.primary};
+        color: ${props => props.theme.text_primary};
       }
 
       .office span{
-        color: ${props => props.theme.font.color.spanDot};
+        color: ${props => props.theme.text_spanDot};
       }
       .office:nth-child(2){
         margin-left: 8px;
@@ -143,13 +143,13 @@ export const AboutMe = styled.div<HomeProps>`
             align-items: center;
             font-size: 0.87rem;
             font-family: 'Poppins', 'Roboto' sans-serif;
-            color: ${props => props.theme.font.color.primary};
+            color: ${props => props.theme.text_primary};
             text-align: left;
 
             button{
-            border: 2px solid ${props => props.theme.font.color.primary};
+            border: 2px solid ${props => props.theme.text_primary};
             background: transparent;
-            color: ${props => props.theme.font.color.primary};
+            color: ${props => props.theme.text_primary};
             border-radius: 4px;
             padding: 0.7rem;
             margin-top: 24px;
@@ -184,7 +184,7 @@ export const AboutMe = styled.div<HomeProps>`
             flex: 1;
             font-size: 1.5rem;
             font-family: 'Poppins', 'Roboto' sans-serif;
-            color: ${props => props.theme.font.color.primary};
+            color: ${props => props.theme.text_primary};
 
                 button{
                     border-width: 4px; 

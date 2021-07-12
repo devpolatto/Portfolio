@@ -100,10 +100,10 @@ export const Logo = styled.h2<HeaderStyledProps>`
     font-size: 1.5rem;
     line-height: 1rem;
 
-    color: ${props => props.theme.font.color.primary};
+    color: ${props => props.theme.text_primary};
 
     span{
-        color: ${props => props.theme.font.color.spanDot};
+        color: ${props => props.theme.text_spanDot};
     }
 
     @media (min-width: 768px){
@@ -176,7 +176,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
             position: relative;
             overflow:hidden;
 
-            color: ${props => props.theme.font.color.primary};
+            color: ${props => props.theme.text_primary};
             
             &:after{
                 content: '';
@@ -185,7 +185,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
                 left: 50%;
                 width: 0;
                 height: 4px;
-                background: ${props => props.theme.font.color.spanDot};
+                background: ${props => props.theme.text_spanDot};
                 border-radius: 90px;
                 transition: 0.5s;
             }
@@ -247,7 +247,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
         }
 
         input:checked + label {
-        background: ${props => props.theme.font.color.activeSwitchTheme};
+        background: ${props => props.theme.activeSwitchTheme};
         }
 
         input:checked + label:after {
