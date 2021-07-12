@@ -4,6 +4,8 @@ import styles from '../../styles/Home/Home.module.css'
 import Lottie from 'react-lottie';
 import DeveloperAnimation from '../../public/developerAnimation.json';
 
+import Title from '../components/Title';
+
 import Avatar from '../../public/avatar.png';
 
 import { Cover, AboutMe } from '../../styles/Home/styles';
@@ -36,7 +38,7 @@ export default function Home() {
       </Cover>
 
       <AboutMe id="about-me">
-        {/* <Title text={'Sobre mim'} /> */}
+        <Title text={'Sobre mim'} />
         <div className="content">
           <div className="avatar-img">
             <Image src={Avatar} alt="Avatar" className="" />
