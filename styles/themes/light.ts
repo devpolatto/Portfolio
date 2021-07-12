@@ -8,5 +8,6 @@ export default {
     CoverName: "##0e0e0e",
     bestColorTheme: "#91F9E5",
     activeSwitchTheme: '#0b246e',
+    title_sectiom: 
 
 }
