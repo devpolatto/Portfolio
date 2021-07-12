@@ -16,7 +16,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
     top: 0;
     z-index: 1;
 
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
 
 
     @media (min-width: 768px) {
-        padding: 1rem 1rem;
+        padding: 0.8rem 1rem;
 
         justify-content: space-between;
 
