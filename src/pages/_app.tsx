@@ -1,16 +1,15 @@
-import '../../styles/globals.css'
-import Head from 'next/head'
 import { useState } from 'react';
+import Head from 'next/head'
 import type { AppProps } from 'next/app';
-
-import { GlobalStyled } from '../../styles/Global';
-
-import dark from '../../styles/themes/dark';
-import light from '../../styles/themes/light';
 
 import { ThemeProvider } from 'styled-components';
 
 import Header from '../components/Header';
+
+import dark from '../../styles/themes/dark';
+import light from '../../styles/themes/light';
+
+import { GlobalStyled } from '../../styles/Global';
 
 function MyApp({ Component, pageProps }: AppProps) {
 

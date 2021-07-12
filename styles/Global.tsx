@@ -14,7 +14,7 @@ export const GlobalStyled = createGlobalStyle`
 
         background-color: ${props => props.theme.background};
 
-        width: 100vh;
+        width: 100%;
         height: 100%;
 
         display: flex;
@@ -23,8 +23,4 @@ export const GlobalStyled = createGlobalStyle`
         justify-content: space-between;
     }
 
-    #__next{
-        width: 100vh;
-        height: 100vh;
-    }
 `;

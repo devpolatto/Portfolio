@@ -143,7 +143,7 @@ export const AboutMe = styled.div<HomeProps>`
             align-items: center;
             font-size: 0.87rem;
             font-family: 'Poppins', 'Roboto' sans-serif;
-            color: ${props => props.theme.background};
+            color: ${props => props.theme.font.color.primary};
             text-align: left;
 
             button{
@@ -184,7 +184,7 @@ export const AboutMe = styled.div<HomeProps>`
             flex: 1;
             font-size: 1.5rem;
             font-family: 'Poppins', 'Roboto' sans-serif;
-            color: ${props => props.theme.background};
+            color: ${props => props.theme.font.color.primary};
 
                 button{
                     border-width: 4px; 
