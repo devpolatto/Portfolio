@@ -9,5 +9,6 @@ export default {
     bestColorTheme: "#91F9E5",
     activeSwitchTheme: '#0b246e',
     title_section: '#0e0e0e',
-    cardbox: '#FFFFFF'
+    cardbox: '#FFFFFF',
+    textHoverPrimary: '#343434'
 }

@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { FaGithub } from 'react-icons/fa'
 
 import letmeask from '../../public/letmeask.png';
 import plantmanager from '../../public/plantmanager.png';
@@ -14,7 +17,8 @@ import {
     ProjectDescription,
     ProjectTitle,
     Description,
-    ProjectPreview
+    ProjectPreview,
+    SeeMoreFooter
 } from '../../styles/projects/index';
 
 const Projects: React.FC = () => {
@@ -60,6 +64,13 @@ const Projects: React.FC = () => {
                     </ProjectPreview>
                 </Project>
             </ProjectGrid>
+            <SeeMoreFooter>
+                <Link href="https://github.com/devpolatto?tab=repositories">
+                    <div className="see-more">
+                        Ver mais projeto no Github <FaGithub className="githubicon" />
+                    </div>
+                </Link>
+            </SeeMoreFooter>
         </Container>
     );
 }

@@ -167,3 +167,48 @@ export const ProjectPreview = styled.div`
 
     }
 `
+
+export const SeeMoreFooter = styled.footer`
+    width: 100%;
+    padding: 1rem 0;
+
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    
+    .see-more{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        padding: 0.5rem 0.8rem;
+
+        border: 1px solid red;
+
+        cursor: pointer;
+        color: ${props => props.theme.text_primary};
+        font-size: 1rem;
+
+        transition: 0.2s ease-in-out;
+
+        &:hover{
+            color: ${props => props.theme.textHoverPrimary}
+        }
+
+        .githubicon{
+            color: ${props => props.theme.text_primary};
+        }
+    }
+    
+    @media (min-width: 768px) {
+        bottom: 16px;
+        font-size: 1.8rem;
+
+        .see-more{
+            font-size: 1.8rem;
+
+        }
+    }
+`
