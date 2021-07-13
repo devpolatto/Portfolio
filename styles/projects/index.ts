@@ -88,11 +88,6 @@ export const Project = styled.a`
 
     transition: .2s ease-in-out 0s;
 
-    img{
-        width: 250px;
-        height: 100%;
-    }
-
     @media (min-width: 768px){
         width: 600px;
         height: 250px;
@@ -112,8 +107,6 @@ export const ProjectDescription = styled.div`
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 0.5rem;
 
     border-radius: 8px 0 0 8px;
 
@@ -152,27 +145,25 @@ export const Description = styled.div`
     }
 `
 
-export const ProjectLink = styled.div`
-    color: #fff;
-`
 
 export const ProjectPreview = styled.div`
 
+    height: 100%;
     border-radius: 0 4px 4px 0;
 
     img{
-        width: 130px;
-        height: 100%;
-
+        width: 150px;
+        height: 140px;
         border-radius: 0 4px 4px 0;
     }
 
     @media (min-width: 768px){
-        img{
-            width: 250px;
-            height: 100%;
 
+        img{
+            width: 300px;
+            height: 250px;
             border-radius: 0 8px 8px 0;
         }
+
     }
 `

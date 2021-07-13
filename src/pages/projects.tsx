@@ -1,5 +1,9 @@
 import React from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa'
+import Image from 'next/image';
+
+import letmeask from '../../public/letmeask.png';
+import plantmanager from '../../public/plantmanager.png';
+import js from '../../public/javascript.png';
 
 import Title from '../components/Title';
 
@@ -10,7 +14,6 @@ import {
     ProjectDescription,
     ProjectTitle,
     Description,
-    ProjectLink,
     ProjectPreview
 } from '../../styles/projects/index';
 
@@ -27,7 +30,7 @@ const Projects: React.FC = () => {
                         </Description>
                     </ProjectDescription>
                     <ProjectPreview>
-                        <img src="https://github.com/devpolatto/Letmeask_NLW-6/raw/master/.github/Capa.png" alt="" />
+                        <Image src={letmeask} placeholder="blur" />
                     </ProjectPreview>
                 </Project>
 
@@ -41,45 +44,19 @@ const Projects: React.FC = () => {
                         </Description>
                     </ProjectDescription>
                     <ProjectPreview>
-                        <img src="https://github.com/devpolatto/PlantManager_NLW5/raw/main/.github/plantmanager-preview.png" alt="" />
+                        <Image src={plantmanager} placeholder="blur" />
                     </ProjectPreview>
                 </Project>
 
                 <Project href="https://github.com/devpolatto/Move.it_NLW4/#readme" target="_blank">
                     <ProjectDescription>
-                        <ProjectTitle>Plant Manager</ProjectTitle>
+                        <ProjectTitle>Move.it</ProjectTitle>
                         <Description>
-                            This is a project developed during Next Level Week # 5, presented by @Rocketseat.
-                            PlantManager is an application developed in order to help people who have plants
-                            at home to remember to water them.
+                            This is a project developed during Next Level Week # 4.
                         </Description>
                     </ProjectDescription>
                     <ProjectPreview>
-                        <img src="https://www.luiztools.com.br/wp-content/uploads/2020/06/reactJS.png" alt="" />
-                    </ProjectPreview>
-                </Project>
-
-                <Project href="https://github.com/devpolatto/Letmeask_NLW-6/#readme" target="_blank">
-                    <ProjectDescription>
-                        <ProjectTitle>Letme Ask</ProjectTitle>
-                        <Description>
-                            This is a project developed during Next Level Week # 6, presented by @Rocketseat.
-                        </Description>
-                    </ProjectDescription>
-                    <ProjectPreview>
-                        <img src="https://github.com/devpolatto/Letmeask_NLW-6/raw/master/.github/Capa.png" alt="" />
-                    </ProjectPreview>
-                </Project>
-
-                <Project href="https://github.com/devpolatto/Letmeask_NLW-6/#readme" target="_blank">
-                    <ProjectDescription>
-                        <ProjectTitle>Letme Ask</ProjectTitle>
-                        <Description>
-                            This is a project developed during Next Level Week # 6, presented by @Rocketseat.
-                        </Description>
-                    </ProjectDescription>
-                    <ProjectPreview>
-                        <img src="https://github.com/devpolatto/Letmeask_NLW-6/raw/master/.github/Capa.png" alt="" />
+                        <Image src={js} placeholder="blur" />
                     </ProjectPreview>
                 </Project>
             </ProjectGrid>
