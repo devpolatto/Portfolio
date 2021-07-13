@@ -185,8 +185,6 @@ export const SeeMoreFooter = styled.footer`
 
         padding: 0.5rem 0.8rem;
 
-        border: 1px solid red;
-
         cursor: pointer;
         color: ${props => props.theme.text_primary};
         font-size: 1rem;
