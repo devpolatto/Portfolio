@@ -63,14 +63,15 @@ const Projects: React.FC = () => {
                         <Image src={js} placeholder="blur" />
                     </ProjectPreview>
                 </Project>
+                <SeeMoreFooter>
+                    <Link href="https://github.com/devpolatto?tab=repositories" >
+                        <div className="see-more">
+                            Ver mais projeto no Github <FaGithub className="githubicon" />
+                        </div>
+                    </Link>
+                </SeeMoreFooter>
             </ProjectGrid>
-            <SeeMoreFooter>
-                <Link href="https://github.com/devpolatto?tab=repositories">
-                    <div className="see-more">
-                        Ver mais projeto no Github <FaGithub className="githubicon" />
-                    </div>
-                </Link>
-            </SeeMoreFooter>
+
         </Container>
     );
 }

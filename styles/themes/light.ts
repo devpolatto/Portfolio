@@ -10,5 +10,7 @@ export default {
     activeSwitchTheme: '#0b246e',
     title_section: '#0e0e0e',
     cardbox: '#FFFFFF',
-    textHoverPrimary: '#343434'
+    textHoverPrimary: '#343434',
+    textSeeMoreButton: '#FFFFFF',
+    borderSeeMoreButton: '#0e0e0e'
 }

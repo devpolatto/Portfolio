@@ -16,7 +16,6 @@ export const ProjectGrid = styled.div`
     max-width: 1980px;
     height: 100%;
     max-height: 100vh;
-
     overflow-y: scroll;
 
     display: grid;
@@ -172,11 +171,16 @@ export const SeeMoreFooter = styled.footer`
     width: 100%;
     padding: 1rem 0;
 
-    position: fixed;
-    bottom: 0;
     display: flex;
     justify-content: center;
     text-decoration: none;
+
+    &:hover{
+        .see-more{
+            background-color: ${props => props.theme.textHoverPrimary};
+            color: ${props => props.theme.textSeeMoreButton};
+        }
+    }
     
     .see-more{
         display: flex;
@@ -185,18 +189,19 @@ export const SeeMoreFooter = styled.footer`
 
         padding: 0.5rem 0.8rem;
 
+        background-color: transparent;
+
+        border: 2px solid ${props => props.theme.borderSeeMoreButton};
+        border-radius: 8px;
+
         cursor: pointer;
         color: ${props => props.theme.text_primary};
         font-size: 1rem;
 
-        transition: 0.2s ease-in-out;
-
-        &:hover{
-            color: ${props => props.theme.textHoverPrimary}
-        }
+        transition: 0.4s ease-in-out;
 
         .githubicon{
-            color: ${props => props.theme.text_primary};
+            background: transparent;
         }
     }
     
@@ -204,8 +209,21 @@ export const SeeMoreFooter = styled.footer`
         bottom: 16px;
         font-size: 1.8rem;
 
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+
         .see-more{
             font-size: 1.8rem;
+            padding: 0.8rem 2rem;
+
+            border: 4px solid ${props => props.theme.borderSeeMoreButton};
+
+        .githubicon{
+            height: 32px;
+            width: 32px;
+        }
 
         }
     }
