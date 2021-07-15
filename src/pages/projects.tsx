@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
                 <SeeMoreFooter>
                     <Link href="https://github.com/devpolatto?tab=repositories" >
                         <div className="see-more">
-                            Ver mais projeto no Github <FaGithub className="githubicon" />
+                            Ver mais projetos no Github <FaGithub className="githubicon" />
                         </div>
                     </Link>
                 </SeeMoreFooter>
