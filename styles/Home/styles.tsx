@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-// import { themes } from '../../styles/themes';
 
 
 interface HomeProps {
@@ -141,10 +140,31 @@ export const AboutMe = styled.div<HomeProps>`
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+
+            margin-top: 16px;
+
             font-size: 0.87rem;
             font-family: 'Poppins', 'Roboto' sans-serif;
             color: ${props => props.theme.text_primary};
             text-align: left;
+
+            .techs{
+              width: 100%;
+              height: auto;
+
+              margin-top: 16px;
+
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap:0.4rem;
+
+              @media (min-width: 768px){
+                margin-top: 0;
+                justify-content: flex-start;
+                gap: 1rem;
+              }
+            }
 
             button{
             border: 2px solid ${props => props.theme.text_primary};
@@ -163,7 +183,7 @@ export const AboutMe = styled.div<HomeProps>`
 
             padding: 0;
 
-            max-width: 1600px;
+            max-width: 1900px;
 
             .avatar-img{
             display: flex;
@@ -172,16 +192,20 @@ export const AboutMe = styled.div<HomeProps>`
             flex: 1;
 
                 img{
-                    width: 20rem;
+                    width: 600px;
+                    height:600px;
                     padding: 0;
                 }
             }
 
             .about-me-description{
             display: flex;
+            flex: 1;
             gap: 16px;
             align-items: flex-start;
-            flex: 1;
+
+            margin-top: 0;
+
             font-size: 1.5rem;
             font-family: 'Poppins', 'Roboto' sans-serif;
             color: ${props => props.theme.text_primary};
@@ -199,7 +223,7 @@ export const AboutMe = styled.div<HomeProps>`
     @media (min-width: 768px){
         justify-content: space-around;
         align-items: center;
-        height: 50vh;
+        height: 100%;
     }
 
 `
