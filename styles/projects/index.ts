@@ -8,19 +8,21 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding: 100px 0 16px 0 ;
+  padding: 80px 0 16px 0 ;
 `;
 
 export const ProjectGrid = styled.div`
     width: 100%;
-    max-width: 1980px;
+    max-width: 2000px;
     height: 100%;
     max-height: 100vh;
+
     overflow-y: scroll;
 
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1rem;
+
     padding: 1rem;
     place-content: start; 
     
@@ -30,6 +32,10 @@ export const ProjectGrid = styled.div`
     @media (min-width: 768px){
         place-content: start; 
         place-items: center;
+
+        margin-top: 16px;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
         ::-webkit-scrollbar{
             width: 4px;
@@ -42,21 +48,15 @@ export const ProjectGrid = styled.div`
         
     }
 
-    @media (min-width: 1024px){
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        ::-webkit-scrollbar{
-            width: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb{
-            background-color: #383a59;
-            border-radius: 4px;
-        }
+    @media (max-width: 1440px){
+        max-width: 1300px;
     }
 
-    @media (min-width: 1750px){
+
+    @media (min-width: 2000px){
         grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 0;
 
         ::-webkit-scrollbar{
             width: 8px;
@@ -82,19 +82,28 @@ export const Project = styled.a`
 
     background-color: ${props => props.theme.cardbox};
 
-    -webkit-box-shadow: 0px 9px 11px 0px rgba(0,0,0,0.8); 
-    box-shadow: 0px 9px 11px 0px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.8); 
+    box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.4);
 
     transition: .2s ease-in-out 0s;
 
-    @media (min-width: 768px){
-        width: 600px;
-        height: 250px;
+    @media (min-width: 767px){
+        width: 360px;
+        height: 200px;
         border-radius: 8px;
 
         &:hover{
             transform: scale(0.9);
         }
+    }
+
+    @media (min-width: 1024px){
+        width: 480px;
+    }
+
+    @media (min-width: 1440px){
+        width: 600px;
+        height: 240px;
     }
 `
 
@@ -122,8 +131,12 @@ export const ProjectTitle = styled.div`
     font-weight: 400;
 
     @media (min-width: 768px){
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: 700;
+    }
+
+    @media (min-width: 1440px){
+        font-size: 1.8rem;
     }
 `
 
@@ -133,14 +146,17 @@ export const Description = styled.div`
     max-width: 90%;
     word-wrap: break-word;
     font-size: 0.8rem;
-    font-weight: 100;
+    font-weight: 400;
 
-    white-space: wrap;
-    text-overflow: clip ellipsis;
+    /* white-space: wrap;
+    text-overflow: clip ellipsis; */
 
     @media (min-width: 768px){
         font-size: 1rem;
-        font-weight: 100;
+    }
+
+    @media (min-width: 1440px){
+        font-size: 1.3rem;
     }
 `
 
@@ -156,14 +172,27 @@ export const ProjectPreview = styled.div`
         border-radius: 0 4px 4px 0;
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 767px){
 
         img{
             width: 300px;
-            height: 250px;
+            height: 200px;
             border-radius: 0 8px 8px 0;
         }
 
+    }
+
+    @media (min-width: 1024px){
+       img{
+           width: 340px;
+       }
+    }
+
+    @media (min-width: 1440px){
+        width: 400px;
+        img{
+            height: 240px;
+        }
     }
 `
 
@@ -202,6 +231,8 @@ export const SeeMoreFooter = styled.footer`
 
         .githubicon{
             background: transparent;
+            width: 28px;
+            height: 28px;
         }
     }
     
@@ -215,16 +246,22 @@ export const SeeMoreFooter = styled.footer`
         z-index: 10;
 
         .see-more{
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             padding: 0.8rem 2rem;
 
             border: 4px solid ${props => props.theme.borderSeeMoreButton};
 
-        .githubicon{
-            height: 32px;
-            width: 32px;
-        }
+            .githubicon{
+                height: 32px;
+                width: 32px;
+            }
 
         }
     }
+
+    @media (min-width:800px){
+        bottom: 4px;
+    }
+
+
 `

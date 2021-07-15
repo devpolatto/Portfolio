@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 import { FaGithub } from 'react-icons/fa'
 
-import letmeask from '../../public/letmeask.png';
-import plantmanager from '../../public/plantmanager.png';
-import js from '../../public/javascript.png';
+import letmeaskPreview from '../../public/letmeask.png';
+import plantmanagerPreview from '../../public/plantmanager.png';
+import jsPreview from '../../public/javascript.png';
 
 import Title from '../components/Title';
 
@@ -28,13 +28,13 @@ const Projects: React.FC = () => {
             <ProjectGrid>
                 <Project href="https://github.com/devpolatto/Letmeask_NLW-6/#readme" target="_blank">
                     <ProjectDescription>
-                        <ProjectTitle>Letme Ask</ProjectTitle>
+                        <ProjectTitle>LetmeAsk</ProjectTitle>
                         <Description>
                             This is a project developed during Next Level Week # 6, presented by @Rocketseat.
                         </Description>
                     </ProjectDescription>
                     <ProjectPreview>
-                        <Image src={letmeask} placeholder="blur" />
+                        <Image src={letmeaskPreview} placeholder="blur" />
                     </ProjectPreview>
                 </Project>
 
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
                         </Description>
                     </ProjectDescription>
                     <ProjectPreview>
-                        <Image src={plantmanager} placeholder="blur" />
+                        <Image src={plantmanagerPreview} placeholder="blur" />
                     </ProjectPreview>
                 </Project>
 
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
                         </Description>
                     </ProjectDescription>
                     <ProjectPreview>
-                        <Image src={js} placeholder="blur" />
+                        <Image src={jsPreview} placeholder="blur" />
                     </ProjectPreview>
                 </Project>
                 <SeeMoreFooter>
