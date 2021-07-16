@@ -167,12 +167,19 @@ export const AboutMe = styled.div<HomeProps>`
             }
 
             button{
-            border: 2px solid ${props => props.theme.text_primary};
+            border: 2px solid ${props => props.theme.borderSeeMoreButton};
             background: transparent;
             color: ${props => props.theme.text_primary};
             border-radius: 4px;
             padding: 0.7rem;
             margin-top: 24px;
+
+            transition: 0.4s ease-in-out;
+            
+              &:hover{
+                background-color: ${props => props.theme.textHoverPrimary};
+                color: ${props => props.theme.textSeeMoreButton};
+              }
             }
         }
 
@@ -182,6 +189,8 @@ export const AboutMe = styled.div<HomeProps>`
             align-items: center;
 
             padding: 0;
+
+            margin-top: 32px;
 
             max-width: 1900px;
 
@@ -213,8 +222,8 @@ export const AboutMe = styled.div<HomeProps>`
                 button{
                     border-width: 4px; 
                     border-radius: 8px;
-                    font-size: 1.5rem;
-                    padding: 0.8rem 1rem;
+                    font-size: 1.6rem;
+                    padding: 0.8rem 2rem;
                 }
             }
         }
