@@ -1,24 +1,17 @@
 import React, { useContext, useState } from 'react';
 import Link from 'next/link';
 
-import { ThemeContext } from 'styled-components';
-
 import { HeaderStyled, Nav, NavItems, Logo } from './styles';
-
-import { useTheme } from '../../hooks/useTheme';
 
 type HeaderType = {
     theme: object;
-    handleTheme: () => void;
+    handleTheme?: () => void;
 }
 
-function Header({ theme, handleTheme }: HeaderType) {
-
-    // const themeSettings = useContext(ThemeContext)
+function Header({ theme }: HeaderType) {
 
     const [isOpen, setIsOpen] = useState(true);
     const [isActiveButton, setIsActiveButton] = useState(false);
-    // const { theme, handleSetTheme } = useTheme();
 
     function showSideBar() {
         isOpen === false ? setIsOpen(true) : setIsOpen(false)
@@ -42,14 +35,13 @@ function Header({ theme, handleTheme }: HeaderType) {
             </button>
             <Nav sidebarHidden={isOpen} >
                 <NavItems >
-                    <li><Link href="/">Inicio</Link></li>
-                    <li><Link href="#about-me">Skills</Link></li>
+                    <li><Link href="/" scroll>Home</Link></li>
+                    <li><Link href="/#about-me">Who i am</Link></li>
                     <li><Link href="/projects">Projects</Link></li>
-                    <li><Link href="/contact">Contato</Link></li>
-                    <div className="checkbox">
+                    {/* <div className="checkbox">
                         <input onClick={() => handleTheme()} type="checkbox" id="switch" />
                         <label htmlFor="switch" />
-                    </div>
+                    </div> */}
                 </NavItems>
             </Nav>
         </HeaderStyled>
