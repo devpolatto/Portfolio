@@ -18,7 +18,6 @@ import {
   SassImg,
   PostgresqlImg,
   MongoImg,
-  FortinetImg
 } from '../components/TechsImg/index';
 
 import { Cover, AboutMe } from '../../styles/Home/styles';
@@ -39,13 +38,12 @@ export default function Home() {
       <Cover id="cover">
         <div className="title">
           <div className="content">
-            {/* <div className="hello text-myText-light text-sm lg:text-2xl">Olá! Meu nome é</div> */}
-            <div className="name text-myText-title font-bold text-4xl md:text-6xl lg:text-6xl 2xl:text-9xl">Angelo Polatto</div>
-            <div className="office text-myText-light font-bold text-1xl md:text-2xl lg:text-2xl 2xl:text-4xl">Técnico de <span className="text-myText-title">TI</span> &</div>
-            <div className="office w-max ml-20 text-myText-light font-bold text-1xl md:text-2xl lg:text-2xl 2xl:text-4xl">Desenvolvedor <span className="text-myText-title">MERN</span> stack</div>
+            <div className="name">Angelo Polatto</div>
+            <div className="office">Técnico de <span>TI</span> &</div>
+            <div className="office">Desenvolvedor <span>MERN</span> stack</div>
           </div>
         </div>
-        <div id="animation-lottie" className="lottie flex justify-center items-center lg:w-96 lg:h-96">
+        <div className="lottie">
           <Lottie options={defaultOptionsLottie} height={"100%"} width={"100%"} />
         </div>
       </Cover>
