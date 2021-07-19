@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import styles from '../../styles/Home/Home.module.css'
 
 import Lottie from 'react-lottie';
@@ -76,7 +77,10 @@ export default function Home() {
               Mas as coisas foram mudando logo após entrar na faculdade e conhecer pessoas que gostavam do assunto,
               então fui conhecendo novas tecnologias, com o PHP, consegui fazer algumas aplicações legais, aquele
               velho CRUD que nos persegue, mas sentia que faltava algo, era como se nada do que codificasse,
-              realmente funcionasse, ou até mesmo tivesse valor. <br />Então, em 2020, conheci a Rocketseat, e fui
+              realmente funcionasse, ou até mesmo tivesse valor.
+              <br />
+              <br />
+              Então, em 2020, fui
               apresentado com maestria ao universo JavaScript, descobre muito mais que o famoso <i>document.</i> e
               o <i>$()</i>, e foi aí que percebi como podia sair da estagnação
               onde me encontrava. Eu sei, a estrada é longa, o bug é eterno, mas a minha persistência também. Hoje,
@@ -93,9 +97,8 @@ export default function Home() {
               <GitImg />
               <PostgresqlImg />
               <MongoImg />
-              <FortinetImg />
             </div>
-            <button>Download CV</button>
+            <a className="download-cv" href="/AngeloPolatto.pdf" download>Download CV</a>
           </div>
         </div>
       </AboutMe>

@@ -166,7 +166,8 @@ export const AboutMe = styled.div<HomeProps>`
               }
             }
 
-            button{
+            .download-cv{
+            text-decoration: none;
             border: 2px solid ${props => props.theme.borderSeeMoreButton};
             background: transparent;
             color: ${props => props.theme.text_primary};
@@ -219,7 +220,7 @@ export const AboutMe = styled.div<HomeProps>`
             font-family: 'Poppins', 'Roboto' sans-serif;
             color: ${props => props.theme.text_primary};
 
-                button{
+                .download-cv{
                     border-width: 4px; 
                     border-radius: 8px;
                     font-size: 1.6rem;
