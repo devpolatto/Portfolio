@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-// import { themes } from '../../../styles/themes';
 
 interface HeaderStyledProps {
     theme?: object;
@@ -80,7 +79,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
             transform: translateY(-13px) rotate(90deg);
         }
 
-        @media (min-width: 768px){
+        @media (min-width: 1024px){
             display: none;
         }
 
@@ -89,9 +88,10 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
 
     @media (min-width: 768px) {
         padding: 0.8rem 1rem;
+    }
 
-        justify-content: space-between;
-
+    @media (min-width: 1024px) {
+        padding: 0.8rem 3rem;
     }
 
 `;
@@ -132,8 +132,13 @@ export const Nav = styled.nav<HeaderStyledProps>`
 
     transition: 0.6s;
 
-    @media (min-width: 768px) {
-        display: flex;
+    @media (max-width: 1024px){
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @media (min-width: 1024px) {
         flex-direction: row;
 
         width: auto;
@@ -164,11 +169,17 @@ export const NavItems = styled.ul<HeaderStyledProps>`
         justify-content: center;
 
         a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 144px;
+            height: 50px;
             font-family: 'Roboto';
             font-size: 1.5rem;
             font-weight: 700;
-            line-height: 2rem;
-            padding: 0.75rem 1rem;
+            line-height: 0;
+            /* padding: 1.5rem 1rem; */
 
             text-decoration: none;
             text-transform: uppercase;
@@ -181,18 +192,19 @@ export const NavItems = styled.ul<HeaderStyledProps>`
             &:after{
                 content: '';
                 position: absolute;
-                top: 40px;
-                left: 50%;
+                bottom: 0;
+                left: 0;
                 width: 0;
                 height: 4px;
-                background: ${props => props.theme.text_spanDot};
+                /* background: ${props => props.theme.text_spanDot}; */
+                background: linear-gradient(90deg, rgba(2,0,36,0.4598214285714286) 19%, rgba(145,249,229,1) 69%);
                 border-radius: 90px;
                 transition: 0.5s;
             }
 
             &:hover{
                 &:after{
-                    width: 100%;
+                    width: 80%;
                     left: 0;
                 }
             }
