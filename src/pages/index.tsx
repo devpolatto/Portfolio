@@ -48,7 +48,8 @@ export default function Home() {
           </div>
         </div>
         <div className="lottie">
-          <Lottie options={defaultOptionsLottie} height={"100%"} width={"100%"} />
+          {/* <Lottie options={defaultOptionsLottie} height={"100%"} width={"100%"} /> */}
+          <Image src="/Dev2.svg" width="600" height="600" />
         </div>
       </Cover>
 
