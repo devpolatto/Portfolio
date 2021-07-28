@@ -57,7 +57,7 @@ export default function Home() {
         <Title text={'Sobre mim'} />
         <div className="content">
           <div className="avatar-img">
-            <Image src={Avatar} alt="Avatar" className="" />
+            <Image src={Avatar} alt="Avatar" />
           </div>
           <div className="about-me-description">
             <p>
@@ -70,32 +70,17 @@ export default function Home() {
               como Switchs, Roteadores, Firewall(especificamente o FortiGate), gosto muito de trabalhar utilizando
               Linux(Ubuntu), monitoramento de rede com Zabbix e várias outras coisas.<br /><br />
               Porém, nos bastidores é onde eu mais gosto de passar meu tempo, por que é onde construo e fortaleço
-              minhas habilidade e conhecimentos, tudo em prol de um único objetivo, ser um desenvolvedor, de
+              minhas habilidades e conhecimentos, tudo em prol de um único objetivo, ser um desenvolvedor, de
               preferência um dev Front-end, pois gosto muito da parte visual, a interação com a interface,
-              animações, etc.
-              <br />
-              <br />
-              Tive meu primeiro contato com código em 2016, quando me deparei com a linguagem #C durante um curso
-              de informática logo depois da escola, porém não foi tão legal, muitas dúvidas e poucas respostas.
-              Mas as coisas foram mudando logo após entrar na faculdade e conhecer pessoas que gostavam do assunto,
-              então fui conhecendo novas tecnologias, com o PHP, consegui fazer algumas aplicações legais, aquele
-              velho CRUD que nos persegue, mas sentia que faltava algo, era como se nada do que codificasse,
-              realmente funcionasse, ou até mesmo tivesse valor.
-              <br />
-              <br />
-              Então, em 2020, fui
-              apresentado com maestria ao universo JavaScript, descobre muito mais que o famoso <i>document.</i> e
-              o <i>$()</i>, e foi aí que percebi como podia sair da estagnação
-              onde me encontrava. Eu sei, a estrada é longa, o bug é eterno, mas a minha persistência também. Hoje,
-              com estas tecnologias abaixo, sei que posso fazer muita coisa, e espero fazer ainda mais ao lado de
-              pessoas que compartilham do mesmo sentimento.
+              animações, etc. Hoje, com estas tecnologias abaixo, sei que posso fazer muita coisa, e espero fazer 
+              ainda mais ao lado de pessoas que compartilham do mesmo sentimento.
             </p>
             <div className="techs">
               <HTMLImg />
               <CSSImg />
-              <SassImg />
               <JsImgSVG />
               <ReactImg />
+              <SassImg />
               <NodeImg />
               <GitImg />
               <PostgresqlImg />

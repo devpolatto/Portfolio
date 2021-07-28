@@ -16,8 +16,6 @@ export const Cover = styled.div<HomeProps>`
     align-items: center;
     justify-content: center;
 
-    /* padding-top: 90px; */
-
     z-index: 0;  
 
     .title{
@@ -130,7 +128,8 @@ export const AboutMe = styled.div<HomeProps>`
         align-items: center;
         
         padding: 1rem 0.5rem; 
-        img{
+        
+        .avatar-img{
             width: 9rem;
             padding: 16px 0;
         }
@@ -143,10 +142,12 @@ export const AboutMe = styled.div<HomeProps>`
 
             margin-top: 16px;
 
-            font-size: 0.87rem;
-            font-family: 'Poppins', 'Roboto' sans-serif;
-            color: ${props => props.theme.text_primary};
-            text-align: left;
+            p{
+              font-size: 12px;
+              font-family: 'Poppins', sans-serif;
+              color: ${props => props.theme.text_primary};
+              text-align: left;
+            }
 
             .techs{
               width: 100%;
@@ -158,12 +159,6 @@ export const AboutMe = styled.div<HomeProps>`
               justify-content: center;
               flex-wrap: wrap;
               gap:0.4rem;
-
-              @media (min-width: 768px){
-                margin-top: 0;
-                justify-content: flex-start;
-                gap: 1rem;
-              }
             }
 
             .download-cv{
@@ -183,8 +178,14 @@ export const AboutMe = styled.div<HomeProps>`
               }
             }
         }
+    }
 
-        @media (min-width: 768px){
+    @media (min-width: 768px){
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+
+        .content{
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -196,44 +197,45 @@ export const AboutMe = styled.div<HomeProps>`
             max-width: 1900px;
 
             .avatar-img{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex: 1;
 
-                img{
-                    width: 600px;
-                    height:600px;
-                    padding: 0;
-                }
-            }
+                  img{
+                      width: 400px;
+                      height:400px;
+                      padding: 0;
+                  }
+              }
 
             .about-me-description{
-            display: flex;
-            flex: 1;
-            gap: 16px;
-            align-items: flex-start;
+              display: flex;
+              flex: 1;
+              gap: 16px;
+              align-items: flex-start;
 
-            margin-top: 0;
+              margin-top: 0;
 
-            font-size: 1.5rem;
-            font-family: 'Poppins', 'Roboto' sans-serif;
-            color: ${props => props.theme.text_primary};
+              p{
+                font-size: 18px;
+                
+              }
 
-                .download-cv{
-                    border-width: 4px; 
-                    border-radius: 8px;
-                    font-size: 1.6rem;
-                    padding: 0.8rem 2rem;
-                }
+              .techs{
+                margin-top: 0;
+                justify-content: flex-start;
+                gap: 1rem;
+              }
+
+              .download-cv{
+                  border-width: 4px; 
+                  border-radius: 8px;
+                  font-size: 1.6rem;
+                  padding: 0.8rem 2rem;
+              }
             }
         }
-    }
-
-    @media (min-width: 768px){
-        justify-content: space-around;
-        align-items: center;
-        height: 100%;
     }
 
 `
