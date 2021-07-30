@@ -239,3 +239,11 @@ export const AboutMe = styled.div<HomeProps>`
     }
 
 `
+
+export const Footer = styled.footer`
+  width: 100%;
+  height: auto;
+  padding: 16px 0;
+
+  border: 1px solid red;
+`

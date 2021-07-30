@@ -1,13 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import { useRouter } from 'next/router'
-
-import { useEffect } from 'react';
 
 import styles from '../../styles/Home/Home.module.css'
-
-import Lottie from 'react-lottie';
-import DeveloperAnimation from '../../public/developerAnimation.json';
 
 import Title from '../components/Title';
 
@@ -24,19 +18,9 @@ import {
   MongoImg,
 } from '../components/TechsImg/index';
 
-import { Cover, AboutMe } from '../../styles/Home/styles';
+import { Cover, AboutMe, Footer } from '../../styles/Home/styles';
 
 export default function Home() {
-
-  const defaultOptionsLottie = {
-    loop: true,
-    autoplay: true,
-    animationData: DeveloperAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
-
   return (
     <div className={styles.container}>
       <Cover id="cover">
@@ -48,7 +32,6 @@ export default function Home() {
           </div>
         </div>
         <div className="lottie">
-          {/* <Lottie options={defaultOptionsLottie} height={"100%"} width={"100%"} /> */}
           <Image src="/Dev2.svg" width="600" height="600" />
         </div>
       </Cover>
@@ -90,6 +73,10 @@ export default function Home() {
           </div>
         </div>
       </AboutMe>
+
+      <Footer>
+        
+      </Footer>
     </div>
   )
 }
