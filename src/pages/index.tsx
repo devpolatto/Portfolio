@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link';
 
+import { FaClipboard, FaInstagram, FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa'
+
 import styles from '../../styles/Home/Home.module.css'
 
 import Title from '../components/Title';
@@ -21,6 +23,7 @@ import {
 import { Cover, AboutMe, Footer } from '../../styles/Home/styles';
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Cover id="cover">
@@ -75,7 +78,32 @@ export default function Home() {
       </AboutMe>
 
       <Footer>
-        
+        <Title text="Contact-me" />
+        <div className="contact-list">
+          <div className="contact-icons">
+            <Link href="https://www.instagram.com/angelopolatto/">
+              <FaInstagram className="contact-item" color="white"/>
+            </Link>
+            <Link href="https://www.linkedin.com/in/angelo-polatto-04121998/">
+              <FaLinkedinIn className="contact-item" color="white"/>
+            </Link>
+            <Link href="https://github.com/devpolatto">
+              <FaGithub className="contact-item" color="white"/>
+            </Link>
+            <Link href="https://api.whatsapp.com/send?phone=5581999766539&text=Angelo%20Polatto">
+              <FaWhatsapp className="contact-item" color="white" />
+            </Link>
+          </div>
+          <div className="mail">
+            <h5 className="mail-clipboard">
+              polatto.xcode.job@gmail.com
+            </h5>
+            <span>
+              <FaClipboard className="cliboard" color="white" />
+            </span>
+          </div>
+        </div>
+        <h3><i>Desenvolvido por Angelo Polatto</i></h3>
       </Footer>
     </div>
   )
