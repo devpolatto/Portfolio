@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-// import { themes } from '../../styles/themes';
-
 export const Container = styled.div`
   width: 100%;
 
@@ -12,8 +10,8 @@ export const Container = styled.div`
   padding: 8px 0;
 
   font-size: 1.75rem;
+  color: var(--color-text-title);
   font-weight: 600;
-  color: ${props => props.theme.title_section};
 
   @media (min-width: 768px){
     font-size: 3rem;
