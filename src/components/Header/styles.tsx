@@ -30,7 +30,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
         background: none;
         border: none;
 
-        .hamburger .line{
+        .hamburguer .line{
             width: 35px;
             height: 5px;
             background-color: ${props => props.theme.text_primary};
@@ -41,7 +41,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
             transition: all 0.3s ease-in-out;
         }
 
-        #hamburger-6.is-active{
+        #hamburguer-6.is-active{
             -webkit-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
@@ -54,25 +54,25 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
             transform: rotate(45deg);
         }
 
-        #hamburger-6.is-active .line:nth-child(2){
+        #hamburguer-6.is-active .line:nth-child(2){
             width: 0px;
         }
 
-        #hamburger-6.is-active .line:nth-child(1),
-        #hamburger-6.is-active .line:nth-child(3){
+        #hamburguer-6.is-active .line:nth-child(1),
+        #hamburguer-6.is-active .line:nth-child(3){
             -webkit-transition-delay: 0.3s;
             -o-transition-delay: 0.3s;
             transition-delay: 0.3s;
         }
 
-        #hamburger-6.is-active .line:nth-child(1){
+        #hamburguer-6.is-active .line:nth-child(1){
             -webkit-transform: translateY(13px);
             -ms-transform: translateY(13px);
             -o-transform: translateY(13px);
             transform: translateY(13px);
         }
 
-        #hamburger-6.is-active .line:nth-child(3){
+        #hamburguer-6.is-active .line:nth-child(3){
             -webkit-transform: translateY(-13px) rotate(90deg);
             -ms-transform: translateY(-13px) rotate(90deg);
             -o-transform: translateY(-13px) rotate(90deg);
@@ -113,8 +113,7 @@ export const Logo = styled.h2<HeaderStyledProps>`
 
 export const Nav = styled.nav<HeaderStyledProps>`
     height: 100%;
-    width: ${props => props.sidebarHidden === true ? '0' : '80%'
-    };
+    width: ${props => props.sidebarHidden === true ? '0' : '80%'};
 
     position: fixed;
     z-index: 10;
@@ -132,10 +131,8 @@ export const Nav = styled.nav<HeaderStyledProps>`
 
     transition: 0.6s;
 
-    @media (max-width: 1024px){
-        height: 100vh;
-        flex-direction: column;
-        align-items: flex-start;
+    @media (min-width: 500px){
+        width: ${props => props.sidebarHidden === true ? '0' : '50%'};
     }
 
     @media (min-width: 1024px) {
@@ -215,60 +212,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
         }
     }
 
-    .checkbox{
-
-        margin-top: 24px;
-
-        input[type=checkbox]{
-            height: 0;
-            width: 0;
-            visibility: hidden;
-        }
-
-        input{
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            background: linear-gradient(0deg, #a5a5a5, #717171);
-            border-radius: 20px;
-            box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-        }
-
-        label{
-            text-indent: -9999px;
-            width: 80px;
-            height: 30px;
-            background: grey;
-            display: block;
-            border-radius: 100px;
-            position: relative;
-
-            &:after{
-                content: '';
-                position: absolute;
-                top: 5px;
-                left: 5px;
-                width: 20px;
-                height: 20px;
-                background: #fff;
-                border-radius: 90px;
-                transition: 0.5s;
-            }
-        }
-
-        input:checked + label {
-        background: ${props => props.theme.activeSwitchTheme};
-        }
-
-        input:checked + label:after {
-            left: calc(100% - 5px);
-            transform: translateX(-100%);
-        }
-    }
-
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
         gap: 10px;
         flex-direction: row;
 
