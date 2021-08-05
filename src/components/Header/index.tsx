@@ -3,12 +3,7 @@ import Link from 'next/link';
 
 import { HeaderStyled, Nav, NavItems, Logo } from './styles';
 
-type HeaderType = {
-    theme: object;
-    handleTheme?: () => void;
-}
-
-function Header({ theme }: HeaderType) {
+function Header() {
 
     const [isOpen, setIsOpen] = useState(true);
     const [isActiveButton, setIsActiveButton] = useState(false);

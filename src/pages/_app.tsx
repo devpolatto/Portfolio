@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Polatto.dev</title>
       </Head>
-      <Header theme={theme} handleTheme={handleSetTheme} />
+      <Header/>
       <Component {...pageProps} />
       <GlobalStyled />
     </ThemeProvider>
