@@ -19,6 +19,8 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
     align-items: center;
     justify-content: space-between;
 
+    background-color: var(--color-background);
+
     button {
         background: none;
         border: none;
