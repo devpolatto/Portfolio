@@ -9,6 +9,7 @@ interface HeaderStyledProps {
 
 export const HeaderStyled = styled.div<HeaderStyledProps>`
     width: 100%;
+    max-width: 2000px;
 
     padding: 0.5rem 1rem;  
     position: fixed;
