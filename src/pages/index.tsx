@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div className="lottie">
-          <Image src="/Dev2.svg" width="600" height="600" />
+          <Image src="/Dev2.svg" width="600" height="600" alt="vector"/>
         </div>
       </Cover>
 
