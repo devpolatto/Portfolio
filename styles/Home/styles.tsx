@@ -7,72 +7,100 @@ interface HomeProps {
   children: ReactNode;
 }
 
+export const Container = styled.div`
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 2000px;
+`
+
 export const Cover = styled.div<HomeProps>`
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    padding-top: 24px;
+
+    border: 1px solid green;
+
     z-index: 0;  
+
+    gap: 24px;
 
     .title{
       display: flex;
       justify-content: center;
 
       width: 100%;
-      /* flex: 1; */
       .content{
-
         font-style: italic;
-
         div:nth-child(3){
           margin-left: 32px;
         }
-      }
-
-      .hello{
-        line-height: 1rem;
-        color: ${props => props.theme.text_primary};
       }
 
       .name{
         font-size: 3rem;
         font-family: 'Roboto';
         font-weight: 700;
-        line-height: 3rem;
-        color: ${props => props.theme.CoverName};
+        line-height: 100%;
+        margin-bottom: 8px;
+        color: var(--color-theme);
       }
 
       .office{
         line-height: 1rem;
-        color: ${props => props.theme.text_primary};
+        font-weight: 500;
+        color: var(--color-text-primary);
       }
-
       .office span{
-        color: ${props => props.theme.text_spanDot};
+        color: var(--color-theme);
       }
-      .office:nth-child(2){
+      .office:nth-child(3){
         margin-left: 8px;
       }
 
     }
 
-    .lottie{
+    .vector{
       display: flex;
-      width: 100%;
-      /* flex: 1 */
-
-      pointer-events: none;
+      justify-content: center;
+      width: 350px;
+      height: 350px;
+      border: 1px solid red;
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 500px){
+      .title{
+        .name{
+          font-size: 3.87rem;
+        }
+        .office{
+          font-size: 1.3rem;
+        }
+      }
+
+      .vector{
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @media (min-width: 1024px){
+      padding-top: 0;
       flex-direction: row;
-      /* gap: 3rem; */
+      gap: 0;
 
       .title{
+        flex: 1;
 
         .content{
           div:nth-child(2){
@@ -83,14 +111,8 @@ export const Cover = styled.div<HomeProps>`
           }
         }
 
-        flex: 1;
-
-        .hello{
-          font-size: 1.5rem;
-        }
-
         .name{
-          font-size: 7rem;
+          font-size: 5rem;
           line-height: 100%;
           font-weight: 900;
         }
@@ -101,13 +123,38 @@ export const Cover = styled.div<HomeProps>`
         }
       }
 
-      .lottie{
-        width: auto;
+      .vector{
+        width: 500px;
+        height: 500px;
         flex: 1;
       }
 
     }
-`;
+
+    @media (min-width: 1300px){
+      .vector{
+        width: 600px;
+        height: 600px;
+      }
+    }
+
+    @media (min-width: 1440px){
+      .title{
+        .name{
+          font-size: 7rem;
+        }
+        .office{
+          font-size: 2rem;
+        }
+        .office:nth-child(2){
+          margin-top: 8px;
+        }
+        .office:nth-child(3){
+          margin-top: 4px;
+        }
+      }
+    }
+`
 
 export const AboutMe = styled.div<HomeProps>`
     width: 100%;
