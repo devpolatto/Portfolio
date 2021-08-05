@@ -190,9 +190,10 @@ export const AboutMe = styled.div<HomeProps>`
             margin-top: 16px;
 
             p{
+              max-width: 800px;
               font-size: 12px;
               font-family: 'Poppins', sans-serif;
-              color: ${props => props.theme.text_primary};
+              color: var(--color-text-primary);
               text-align: left;
             }
 
@@ -227,7 +228,7 @@ export const AboutMe = styled.div<HomeProps>`
         }
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 1140px){
         justify-content: space-around;
         align-items: center;
         height: 100%;
@@ -265,7 +266,7 @@ export const AboutMe = styled.div<HomeProps>`
               margin-top: 0;
 
               p{
-                font-size: 18px;
+                font-size: 16px;
                 
               }
 
@@ -278,7 +279,7 @@ export const AboutMe = styled.div<HomeProps>`
               .download-cv{
                   border-width: 4px; 
                   border-radius: 8px;
-                  font-size: 1.6rem;
+                  font-size: 1.4rem;
                   padding: 0.8rem 2rem;
               }
             }
