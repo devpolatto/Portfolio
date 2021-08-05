@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa'
 
 import Title from '../components/Title';
-import Avatar from '../../public/avatar.png';
+import Avatar from '../../public/avatar.jpg';
 import { Container ,Cover, AboutMe, Footer } from '../../styles/Home/styles';
 import {
   ReactImg,
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div className="vector">
-          <Image src="/Dev2.svg" width="600" height="600" alt="vector"/>
+          <Image src="/Developer-vector.svg" width="600" height="600" alt="vector"/>
         </div>
       </Cover>
 
@@ -103,7 +103,7 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <h3><i>Desenvolvido por Angelo Polatto</i></h3>
+        <h3><i>Desenvolvido por <span>Angelo Polatto</span></i></h3>
       </Footer>
     </Container>
   )

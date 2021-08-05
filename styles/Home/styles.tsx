@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 
 interface HomeProps {
-  theme: boolean;
   children: ReactNode;
 }
 
@@ -20,7 +19,7 @@ export const Container = styled.div`
 
 export const Cover = styled.div<HomeProps>`
     width: 100%;
-    height: 80vh;
+    height: 84vh;
 
     display: flex;
     flex-direction: column;
@@ -28,8 +27,6 @@ export const Cover = styled.div<HomeProps>`
     justify-content: center;
 
     padding-top: 24px;
-
-    border: 1px solid green;
 
     z-index: 0;  
 
@@ -75,7 +72,6 @@ export const Cover = styled.div<HomeProps>`
       justify-content: center;
       width: 350px;
       height: 350px;
-      border: 1px solid red;
     }
 
     @media (min-width: 500px){
@@ -95,7 +91,9 @@ export const Cover = styled.div<HomeProps>`
     }
 
     @media (min-width: 1024px){
+      height: 88vh;
       padding-top: 0;
+
       flex-direction: row;
       gap: 0;
 
@@ -177,8 +175,22 @@ export const AboutMe = styled.div<HomeProps>`
         padding: 1rem 0.5rem; 
         
         .avatar-img{
-            width: 9rem;
-            padding: 16px 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+            img{
+              height: 180px;
+              width: 180px;
+              border-radius: 50%;
+
+              box-shadow: 0 0 0 10px #10071D, 
+              0 0 0 15px var(--color-theme), 
+              0 0 0 10px rgb(209 148 148 / 0%), 
+              0 0 0 10px rgb(230 179 179 / 0%), 
+              0 0 0 10px rgb(245 214 214 / 0%);
+            }
         }
 
         .about-me-description{
@@ -211,9 +223,9 @@ export const AboutMe = styled.div<HomeProps>`
 
             .download-cv{
             text-decoration: none;
-            border: 2px solid ${props => props.theme.borderSeeMoreButton};
+            border: 2px solid var(--color-theme);
             background: transparent;
-            color: ${props => props.theme.text_primary};
+            color: var(--color-text-primary);
             border-radius: 4px;
             padding: 0.7rem;
             margin-top: 24px;
@@ -221,8 +233,8 @@ export const AboutMe = styled.div<HomeProps>`
             transition: 0.4s ease-in-out;
             
               &:hover{
-                background-color: ${props => props.theme.textHoverPrimary};
-                color: ${props => props.theme.textSeeMoreButton};
+                background-color: var(--color-theme);
+                color: var(--color-text-secundary);
               }
             }
         }
@@ -251,9 +263,15 @@ export const AboutMe = styled.div<HomeProps>`
               flex: 1;
 
                   img{
-                      width: 400px;
-                      height:400px;
+                      width: 380px;
+                      height:380px;
                       padding: 0;
+
+                      box-shadow: 0 0 0 14px #10071D, 
+                      0 0 0 20px var(--color-theme), 
+                      0 0 0 10px rgb(209 148 148 / 0%), 
+                      0 0 0 10px rgb(230 179 179 / 0%), 
+                      0 0 0 10px rgb(245 214 214 / 0%);
                   }
               }
 
@@ -302,7 +320,10 @@ export const Footer = styled.footer`
     margin-top: 24px;
     font-size: 0.87rem;
     font-weight: 300;
-    color: #ffff;
+    color: var(--color-text-primary);
+    span{
+      color: var(--color-theme)
+    }
   }
 
   .contact-list{
@@ -334,8 +355,8 @@ export const Footer = styled.footer`
         transition: 0.3s ease-in-out;
 
         &:hover{
-          background-color: #91F9E5;
-          fill: #090410;
+          background-color: var(--color-theme);
+          fill: var(--color-text-secundary);
         }
       }
 
@@ -350,14 +371,14 @@ export const Footer = styled.footer`
 
       padding: 12px 24px;
       border-radius: 28px;
-      background-color: #090410;
+      background-color: var(--color-text-tertiary);
 
       cursor: pointer;
 
       transition: 0.2s ease-out;
 
       h5{
-        color: #ffff;
+        color: var(--color-text-primary);
         font-size: 1rem;
       }
 
@@ -366,7 +387,7 @@ export const Footer = styled.footer`
       }
 
     &:hover{
-      background-color: #1C0C31;
+      background-color: var(--color-text-secundary);
     }
   }
   }
