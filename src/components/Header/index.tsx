@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 import { HeaderStyled, Nav, NavItems, Logo } from './styles';
@@ -16,7 +16,6 @@ function Header({ theme }: HeaderType) {
     function showSideBar() {
         isOpen === false ? setIsOpen(true) : setIsOpen(false)
         isActiveButton === true ? setIsActiveButton(false) : setIsActiveButton(true)
-        console.log(isOpen)
     }
 
     return (
@@ -25,9 +24,7 @@ function Header({ theme }: HeaderType) {
                 Polatto<span>.</span>dev
             </Logo>
             <button onClick={showSideBar}>
-                <div
-                    className={`hamburger ${isActiveButton === true ? 'is-active' : ''}`}
-                    id="hamburger-6">
+                <div id="hamburger-6" className={`hamburguer ${isActiveButton === true ? 'is-active' : ''}`}>
                     <span className="line"></span>
                     <span className="line"></span>
                     <span className="line"></span>
@@ -35,13 +32,9 @@ function Header({ theme }: HeaderType) {
             </button>
             <Nav sidebarHidden={isOpen} >
                 <NavItems >
-                    <li><Link href="/" scroll>Home</Link></li>
-                    <li><Link href="/#about-me">Who i am</Link></li>
-                    <li><Link href="/projects">Projects</Link></li>
-                    {/* <div className="checkbox">
-                        <input onClick={() => handleTheme()} type="checkbox" id="switch" />
-                        <label htmlFor="switch" />
-                    </div> */}
+                    <li onClick={showSideBar} className="link-close"><Link href="/" scroll>Início</Link></li>
+                    <li onClick={showSideBar} className="link-close"><Link href="/#about-me">Sobre mim</Link></li>
+                    <li onClick={showSideBar} className="link-close"><Link href="/projects">Projetos</Link></li>
                 </NavItems>
             </Nav>
         </HeaderStyled>
