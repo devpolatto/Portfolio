@@ -5,9 +5,13 @@ export const GlobalStyled = createGlobalStyle`
 
     :root {
         --color-background: #10071D;
-        --color-theme: #91F9E5;
+        --color-theme: #30FDFF;
         --color-sideNav: #1B0C31;
         --color-text-primary: #fff;
+        --color-text-secundary: #1B0C31;
+        --color-text-tertiary: #090410;
+        --color-text-title: #30FDFF;
+        
     }
 
   *{
@@ -23,11 +27,12 @@ export const GlobalStyled = createGlobalStyle`
 
         width: 100%;
         height: 100%;
+    }
 
+    body #__next{
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     ul{
