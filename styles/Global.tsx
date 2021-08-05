@@ -11,6 +11,7 @@ export const GlobalStyled = createGlobalStyle`
         --color-text-secundary: #1B0C31;
         --color-text-tertiary: #090410;
         --color-text-title: #30FDFF;
+        --close-btn: #F71735
         
     }
 

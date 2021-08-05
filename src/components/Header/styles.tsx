@@ -28,7 +28,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
         
         z-index: 11;
 
-        .hamburguer .line{
+        .hamburger .line{
             width: 35px;
             height: 5px;
             background-color: var(--color-text-primary);
@@ -38,8 +38,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
         }
-
-        #hamburguer-6.is-active{
+        #hamburger-6.is-active{
             -webkit-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
@@ -51,26 +50,23 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
             -o-transform: rotate(45deg);
             transform: rotate(45deg);
         }
-
-        #hamburguer-6.is-active .line:nth-child(2){
+        #hamburger-6.is-active .line:nth-child(2){
             width: 0px;
         }
-
-        #hamburguer-6.is-active .line:nth-child(1),
-        #hamburguer-6.is-active .line:nth-child(3){
+        #hamburger-6.is-active .line:nth-child(1),
+        #hamburger-6.is-active .line:nth-child(3){
+            background-color: var(--close-btn);
             -webkit-transition-delay: 0.3s;
             -o-transition-delay: 0.3s;
             transition-delay: 0.3s;
         }
-
-        #hamburguer-6.is-active .line:nth-child(1){
+        #hamburger-6.is-active .line:nth-child(1){
             -webkit-transform: translateY(13px);
             -ms-transform: translateY(13px);
             -o-transform: translateY(13px);
             transform: translateY(13px);
         }
-
-        #hamburguer-6.is-active .line:nth-child(3){
+        #hamburger-6.is-active .line:nth-child(3){
             -webkit-transform: translateY(-13px) rotate(90deg);
             -ms-transform: translateY(-13px) rotate(90deg);
             -o-transform: translateY(-13px) rotate(90deg);
@@ -188,7 +184,7 @@ export const NavItems = styled.ul`
                 width: 0;
                 height: 4px;
                 /* background: ${props => props.theme.text_spanDot}; */
-                background: linear-gradient(90deg, rgba(2,0,36,0.4598214285714286) 19%, rgba(145,249,229,1) 69%);
+                background: linear-gradient(90deg, rgba(2,0,36,0.4598214285714286) 19%, #30FDFF 69%);
                 border-radius: 90px;
                 transition: 0.5s;
             }
