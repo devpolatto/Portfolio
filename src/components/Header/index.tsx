@@ -3,12 +3,7 @@ import Link from 'next/link';
 
 import { HeaderStyled, Nav, NavItems, Logo } from './styles';
 
-type HeaderType = {
-    theme: object;
-    handleTheme?: () => void;
-}
-
-function Header({ theme }: HeaderType) {
+function Header() {
 
     const [isOpen, setIsOpen] = useState(true);
     const [isActiveButton, setIsActiveButton] = useState(false);
@@ -24,7 +19,7 @@ function Header({ theme }: HeaderType) {
                 Polatto<span>.</span>dev
             </Logo>
             <button onClick={showSideBar}>
-                <div id="hamburger-6" className={`hamburguer ${isActiveButton === true ? 'is-active' : ''}`}>
+                <div id="hamburger-6" className={`hamburger ${isActiveButton === true ? 'is-active' : ''}`}>
                     <span className="line"></span>
                     <span className="line"></span>
                     <span className="line"></span>
@@ -32,9 +27,9 @@ function Header({ theme }: HeaderType) {
             </button>
             <Nav sidebarHidden={isOpen} >
                 <NavItems >
-                    <li onClick={showSideBar} className="link-close"><Link href="/" scroll>Início</Link></li>
-                    <li onClick={showSideBar} className="link-close"><Link href="/#about-me">Sobre mim</Link></li>
-                    <li onClick={showSideBar} className="link-close"><Link href="/projects">Projetos</Link></li>
+                    <li onClick={showSideBar}><Link href="/" scroll>início</Link></li>
+                    <li onClick={showSideBar}><Link href="/#about-me">Sobre mim</Link></li>
+                    <li onClick={showSideBar}><Link href="/projects">Projetos</Link></li>
                 </NavItems>
             </Nav>
         </HeaderStyled>

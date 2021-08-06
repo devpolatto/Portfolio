@@ -1,13 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link';
-
-import { FaClipboard, FaInstagram, FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa'
-
-import styles from '../../styles/Home/Home.module.css'
+import { 
+  FaClipboard, 
+  FaInstagram, 
+  FaLinkedinIn, 
+  FaGithub, 
+  FaWhatsapp 
+} from 'react-icons/fa'
 
 import Title from '../components/Title';
-
-import Avatar from '../../public/avatar.png';
+import Avatar from '../../public/avatar.jpg';
+import { Container ,Cover, AboutMe, Footer } from '../../styles/Home/styles';
 import {
   ReactImg,
   JsImgSVG,
@@ -20,12 +23,9 @@ import {
   MongoImg,
 } from '../components/TechsImg/index';
 
-import { Cover, AboutMe, Footer } from '../../styles/Home/styles';
-
 export default function Home() {
-
   return (
-    <div className={styles.container}>
+    <Container>
       <Cover id="cover">
         <div className="title">
           <div className="content">
@@ -34,8 +34,8 @@ export default function Home() {
             <div className="office">Desenvolvedor <span>MERN</span> stack</div>
           </div>
         </div>
-        <div className="lottie">
-          <Image src="/Dev2.svg" width="600" height="600" alt="vector"/>
+        <div className="vector">
+          <Image src="/Developer-vector.svg" width="600" height="600" alt="vector"/>
         </div>
       </Cover>
 
@@ -103,8 +103,8 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <h3><i>Desenvolvido por Angelo Polatto</i></h3>
+        <h3><i>Desenvolvido por <span>Angelo Polatto</span></i></h3>
       </Footer>
-    </div>
+    </Container>
   )
 }

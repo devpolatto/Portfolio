@@ -3,76 +3,102 @@ import styled from 'styled-components';
 
 
 interface HomeProps {
-  theme: boolean;
   children: ReactNode;
 }
 
+export const Container = styled.div`
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 2000px;
+`
+
 export const Cover = styled.div<HomeProps>`
     width: 100%;
-    height: 100vh;
+    height: 84vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    padding-top: 24px;
+
     z-index: 0;  
+
+    gap: 24px;
 
     .title{
       display: flex;
       justify-content: center;
 
       width: 100%;
-      /* flex: 1; */
       .content{
-
         font-style: italic;
-
         div:nth-child(3){
           margin-left: 32px;
         }
-      }
-
-      .hello{
-        line-height: 1rem;
-        color: ${props => props.theme.text_primary};
       }
 
       .name{
         font-size: 3rem;
         font-family: 'Roboto';
         font-weight: 700;
-        line-height: 3rem;
-        color: ${props => props.theme.CoverName};
+        line-height: 100%;
+        margin-bottom: 8px;
+        color: var(--color-theme);
       }
 
       .office{
         line-height: 1rem;
-        color: ${props => props.theme.text_primary};
+        font-weight: 500;
+        color: var(--color-text-primary);
       }
-
       .office span{
-        color: ${props => props.theme.text_spanDot};
+        color: var(--color-theme);
       }
-      .office:nth-child(2){
+      .office:nth-child(3){
         margin-left: 8px;
       }
 
     }
 
-    .lottie{
+    .vector{
       display: flex;
-      width: 100%;
-      /* flex: 1 */
-
-      pointer-events: none;
+      justify-content: center;
+      width: 350px;
+      height: 350px;
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 500px){
+      .title{
+        .name{
+          font-size: 3.87rem;
+        }
+        .office{
+          font-size: 1.3rem;
+        }
+      }
+
+      .vector{
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @media (min-width: 1024px){
+      height: 88vh;
+      padding-top: 0;
+
       flex-direction: row;
-      /* gap: 3rem; */
+      gap: 0;
 
       .title{
+        flex: 1;
 
         .content{
           div:nth-child(2){
@@ -83,14 +109,8 @@ export const Cover = styled.div<HomeProps>`
           }
         }
 
-        flex: 1;
-
-        .hello{
-          font-size: 1.5rem;
-        }
-
         .name{
-          font-size: 7rem;
+          font-size: 5rem;
           line-height: 100%;
           font-weight: 900;
         }
@@ -101,13 +121,38 @@ export const Cover = styled.div<HomeProps>`
         }
       }
 
-      .lottie{
-        width: auto;
+      .vector{
+        width: 500px;
+        height: 500px;
         flex: 1;
       }
 
     }
-`;
+
+    @media (min-width: 1300px){
+      .vector{
+        width: 600px;
+        height: 600px;
+      }
+    }
+
+    @media (min-width: 1440px){
+      .title{
+        .name{
+          font-size: 7rem;
+        }
+        .office{
+          font-size: 2rem;
+        }
+        .office:nth-child(2){
+          margin-top: 8px;
+        }
+        .office:nth-child(3){
+          margin-top: 4px;
+        }
+      }
+    }
+`
 
 export const AboutMe = styled.div<HomeProps>`
     width: 100%;
@@ -130,8 +175,22 @@ export const AboutMe = styled.div<HomeProps>`
         padding: 1rem 0.5rem; 
         
         .avatar-img{
-            width: 9rem;
-            padding: 16px 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+            img{
+              height: 180px;
+              width: 180px;
+              border-radius: 50%;
+
+              box-shadow: 0 0 0 10px #10071D, 
+              0 0 0 15px var(--color-theme), 
+              0 0 0 10px rgb(209 148 148 / 0%), 
+              0 0 0 10px rgb(230 179 179 / 0%), 
+              0 0 0 10px rgb(245 214 214 / 0%);
+            }
         }
 
         .about-me-description{
@@ -143,9 +202,10 @@ export const AboutMe = styled.div<HomeProps>`
             margin-top: 16px;
 
             p{
+              max-width: 800px;
               font-size: 12px;
               font-family: 'Poppins', sans-serif;
-              color: ${props => props.theme.text_primary};
+              color: var(--color-text-primary);
               text-align: left;
             }
 
@@ -163,9 +223,9 @@ export const AboutMe = styled.div<HomeProps>`
 
             .download-cv{
             text-decoration: none;
-            border: 2px solid ${props => props.theme.borderSeeMoreButton};
+            border: 2px solid var(--color-theme);
             background: transparent;
-            color: ${props => props.theme.text_primary};
+            color: var(--color-text-primary);
             border-radius: 4px;
             padding: 0.7rem;
             margin-top: 24px;
@@ -173,14 +233,14 @@ export const AboutMe = styled.div<HomeProps>`
             transition: 0.4s ease-in-out;
             
               &:hover{
-                background-color: ${props => props.theme.textHoverPrimary};
-                color: ${props => props.theme.textSeeMoreButton};
+                background-color: var(--color-theme);
+                color: var(--color-text-secundary);
               }
             }
         }
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 1140px){
         justify-content: space-around;
         align-items: center;
         height: 100%;
@@ -203,9 +263,15 @@ export const AboutMe = styled.div<HomeProps>`
               flex: 1;
 
                   img{
-                      width: 400px;
-                      height:400px;
+                      width: 380px;
+                      height:380px;
                       padding: 0;
+
+                      box-shadow: 0 0 0 14px #10071D, 
+                      0 0 0 20px var(--color-theme), 
+                      0 0 0 10px rgb(209 148 148 / 0%), 
+                      0 0 0 10px rgb(230 179 179 / 0%), 
+                      0 0 0 10px rgb(245 214 214 / 0%);
                   }
               }
 
@@ -218,7 +284,7 @@ export const AboutMe = styled.div<HomeProps>`
               margin-top: 0;
 
               p{
-                font-size: 18px;
+                font-size: 16px;
                 
               }
 
@@ -231,7 +297,7 @@ export const AboutMe = styled.div<HomeProps>`
               .download-cv{
                   border-width: 4px; 
                   border-radius: 8px;
-                  font-size: 1.6rem;
+                  font-size: 1.4rem;
                   padding: 0.8rem 2rem;
               }
             }
@@ -254,7 +320,10 @@ export const Footer = styled.footer`
     margin-top: 24px;
     font-size: 0.87rem;
     font-weight: 300;
-    color: #ffff;
+    color: var(--color-text-primary);
+    span{
+      color: var(--color-theme)
+    }
   }
 
   .contact-list{
@@ -286,8 +355,8 @@ export const Footer = styled.footer`
         transition: 0.3s ease-in-out;
 
         &:hover{
-          background-color: #91F9E5;
-          fill: #090410;
+          background-color: var(--color-theme);
+          fill: var(--color-text-secundary);
         }
       }
 
@@ -302,14 +371,14 @@ export const Footer = styled.footer`
 
       padding: 12px 24px;
       border-radius: 28px;
-      background-color: #090410;
+      background-color: var(--color-text-tertiary);
 
       cursor: pointer;
 
       transition: 0.2s ease-out;
 
       h5{
-        color: #ffff;
+        color: var(--color-text-primary);
         font-size: 1rem;
       }
 
@@ -318,7 +387,7 @@ export const Footer = styled.footer`
       }
 
     &:hover{
-      background-color: #1C0C31;
+      background-color: var(--color-text-secundary);
     }
   }
   }

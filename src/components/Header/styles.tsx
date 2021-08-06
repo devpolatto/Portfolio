@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 interface HeaderStyledProps {
-    theme?: object;
     sidebarHidden?: boolean;
     children?: ReactNode;
 }
@@ -10,38 +9,36 @@ interface HeaderStyledProps {
 
 export const HeaderStyled = styled.div<HeaderStyledProps>`
     width: 100%;
+    max-width: 2000px;
 
+    padding: 0.5rem 1rem;  
     position: fixed;
     top: 0;
     z-index: 1;
-
-    padding: 0.5rem 1rem;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background-color: ${props => props.theme.background};
+    background-color: var(--color-background);
 
     button {
-
-        z-index: 11;
-
         background: none;
         border: none;
+        
+        z-index: 11;
 
-        .hamburguer .line{
+        .hamburger .line{
             width: 35px;
             height: 5px;
-            background-color: ${props => props.theme.text_primary};
+            background-color: var(--color-text-primary);
             display: block;
             margin: 8px auto;
             -webkit-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
         }
-
-        #hamburguer-6.is-active{
+        #hamburger-6.is-active{
             -webkit-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
@@ -53,38 +50,29 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
             -o-transform: rotate(45deg);
             transform: rotate(45deg);
         }
-
-        #hamburguer-6.is-active .line:nth-child(2){
+        #hamburger-6.is-active .line:nth-child(2){
             width: 0px;
         }
-
-        #hamburguer-6.is-active .line:nth-child(1),
-        #hamburguer-6.is-active .line:nth-child(3){
+        #hamburger-6.is-active .line:nth-child(1),
+        #hamburger-6.is-active .line:nth-child(3){
+            background-color: var(--close-btn);
             -webkit-transition-delay: 0.3s;
             -o-transition-delay: 0.3s;
             transition-delay: 0.3s;
         }
-
-        #hamburguer-6.is-active .line:nth-child(1){
+        #hamburger-6.is-active .line:nth-child(1){
             -webkit-transform: translateY(13px);
             -ms-transform: translateY(13px);
             -o-transform: translateY(13px);
             transform: translateY(13px);
         }
-
-        #hamburguer-6.is-active .line:nth-child(3){
+        #hamburger-6.is-active .line:nth-child(3){
             -webkit-transform: translateY(-13px) rotate(90deg);
             -ms-transform: translateY(-13px) rotate(90deg);
             -o-transform: translateY(-13px) rotate(90deg);
             transform: translateY(-13px) rotate(90deg);
         }
-
-        @media (min-width: 1024px){
-            display: none;
-        }
-
     }
-
 
     @media (min-width: 768px) {
         padding: 0.8rem 1rem;
@@ -92,18 +80,22 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
 
     @media (min-width: 1024px) {
         padding: 0.8rem 3rem;
+
+        button{
+            display: none;
+        }
     }
 
 `;
 
-export const Logo = styled.h2<HeaderStyledProps>`
+export const Logo = styled.h2`
     font-size: 1.5rem;
     line-height: 1rem;
 
-    color: ${props => props.theme.text_primary};
+    color: var(--color-text-primary);
 
     span{
-        color: ${props => props.theme.text_spanDot};
+        color: var(--color-theme);
     }
 
     @media (min-width: 768px){
@@ -122,14 +114,14 @@ export const Nav = styled.nav<HeaderStyledProps>`
     padding-top: 60px;
     overflow-x: hidden;
 
-    background-color: ${props => props.theme.background};
+    background-color: var(--color-sideNav);
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
-    transition: 0.6s;
+    transition: 0.5s ease-in-out;
 
     @media (min-width: 500px){
         width: ${props => props.sidebarHidden === true ? '0' : '50%'};
@@ -147,15 +139,13 @@ export const Nav = styled.nav<HeaderStyledProps>`
     }
 `
 
-export const NavItems = styled.ul<HeaderStyledProps>`
+export const NavItems = styled.ul`
     width: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    list-style: none;
 
     li{
         width: auto;
@@ -194,7 +184,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
                 width: 0;
                 height: 4px;
                 /* background: ${props => props.theme.text_spanDot}; */
-                background: linear-gradient(90deg, rgba(2,0,36,0.4598214285714286) 19%, rgba(145,249,229,1) 69%);
+                background: linear-gradient(90deg, rgba(2,0,36,0.4598214285714286) 19%, #30FDFF 69%);
                 border-radius: 90px;
                 transition: 0.5s;
             }
@@ -212,7 +202,7 @@ export const NavItems = styled.ul<HeaderStyledProps>`
         }
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 1023px) {
         gap: 10px;
         flex-direction: row;
 

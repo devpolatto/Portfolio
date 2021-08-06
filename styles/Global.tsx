@@ -3,6 +3,18 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
 
+    :root {
+        --color-background: #10071D;
+        --color-theme: #30FDFF;
+        --color-sideNav: #1B0C31;
+        --color-text-primary: #fff;
+        --color-text-secundary: #1B0C31;
+        --color-text-tertiary: #090410;
+        --color-text-title: #30FDFF;
+        --close-btn: #F71735
+        
+    }
+
   *{
         margin: 0;
         padding: 0;
@@ -12,14 +24,19 @@ export const GlobalStyled = createGlobalStyle`
     body{
         font-family: 'Roboto', 'Poppins', sans-serif;
 
-        background-color: ${props => props.theme.background};
+        background-color: var(--color-background);
 
         width: 100%;
         height: 100%;
+    }
 
+    body #__next{
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+    }
+
+    ul{
+        list-style: none;
     }
 `;
