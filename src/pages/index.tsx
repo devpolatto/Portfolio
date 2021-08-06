@@ -10,7 +10,7 @@ import {
 
 import Title from '../components/Title';
 import Avatar from '../../public/avatar.jpg';
-import { Container ,Cover, AboutMe, Footer } from '../../styles/Home/styles';
+import { Container ,Cover, AboutMe, Footer, Author } from '../../styles/Home/styles';
 import {
   ReactImg,
   JsImgSVG,
@@ -81,18 +81,18 @@ export default function Home() {
         <Title text="Contact-me" />
         <div className="contact-list">
           <div className="contact-icons">
-            <Link href="https://www.instagram.com/angelopolatto/">
+            <a href="https://www.instagram.com/angelopolatto/" rel="noopener noreferrer" target="_blank" >
               <FaInstagram className="contact-item" color="white"/>
-            </Link>
-            <Link href="https://www.linkedin.com/in/angelo-polatto-04121998/">
+            </a>
+            <a href="https://www.linkedin.com/in/angelo-polatto-04121998/" rel="noopener noreferrer" target="_blank">
               <FaLinkedinIn className="contact-item" color="white"/>
-            </Link>
-            <Link href="https://github.com/devpolatto">
+            </a>
+            <a href="https://github.com/devpolatto" rel="noopener noreferrer" target="_blank">
               <FaGithub className="contact-item" color="white"/>
-            </Link>
-            <Link href="https://api.whatsapp.com/send?phone=5581999766539&text=Angelo%20Polatto">
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5581999766539&text=Angelo%20Polatto" rel="noopener noreferrer" target="_blank">
               <FaWhatsapp className="contact-item" color="white" />
-            </Link>
+            </a>
           </div>
           <div className="mail">
             <h5 className="mail-clipboard">
@@ -103,7 +103,7 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <h3><i>Desenvolvido por <span>Angelo Polatto</span></i></h3>
+        <Author>Desenvolvido por <span>Angelo Polatto</span></Author>
       </Footer>
     </Container>
   )

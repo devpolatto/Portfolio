@@ -42,7 +42,7 @@ export const ProjectGrid = styled.div`
         }
 
         ::-webkit-scrollbar-thumb{
-            background-color: #383a59;
+            background-color: var(--color-theme);
             border-radius: 4px;
         }
         
@@ -63,7 +63,7 @@ export const ProjectGrid = styled.div`
         }
 
         ::-webkit-scrollbar-thumb{
-            background-color: #383a59;
+            background-color: var(--color-theme);
             border-radius: 4px;
         }
     }
@@ -80,7 +80,7 @@ export const Project = styled.a`
 
     text-decoration: none;
 
-    background-color: ${props => props.theme.cardbox};
+    background-color: var(--color-cardbox);
 
     -webkit-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.8); 
     box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.4);
@@ -125,7 +125,7 @@ export const ProjectDescription = styled.div`
 `
 
 export const ProjectTitle = styled.div`
-    color: ${props => props.theme.text_primary};
+    color: var(--color-text-primary);
 
     font-size: 1.2rem;
     font-weight: 400;
@@ -141,15 +141,12 @@ export const ProjectTitle = styled.div`
 `
 
 export const Description = styled.div`
-    color: ${props => props.theme.text_primary};
+    color: var(--color-text-primary);
 
     max-width: 90%;
     word-wrap: break-word;
     font-size: 0.8rem;
     font-weight: 400;
-
-    /* white-space: wrap;
-    text-overflow: clip ellipsis; */
 
     @media (min-width: 768px){
         font-size: 1rem;
@@ -203,13 +200,6 @@ export const SeeMoreFooter = styled.footer`
     display: flex;
     justify-content: center;
     text-decoration: none;
-
-    &:hover{
-        .see-more{
-            background-color: ${props => props.theme.textHoverPrimary};
-            color: ${props => props.theme.textSeeMoreButton};
-        }
-    }
     
     .see-more{
         display: flex;
@@ -219,13 +209,13 @@ export const SeeMoreFooter = styled.footer`
         padding: 0.5rem 0.8rem;
 
         background-color: transparent;
-
-        border: 2px solid ${props => props.theme.borderSeeMoreButton};
+        
+        color: var(--color-text-primary);
+        border: 2px solid var(--color-theme);
         border-radius: 8px;
 
-        cursor: pointer;
-        color: ${props => props.theme.text_primary};
         font-size: 1rem;
+        cursor: pointer;
 
         transition: 0.4s ease-in-out;
 
@@ -233,6 +223,13 @@ export const SeeMoreFooter = styled.footer`
             background: transparent;
             width: 28px;
             height: 28px;
+        }
+    }
+
+    &:hover{
+        .see-more{
+            background-color: var(--color-theme);
+            color: var(--color-text-secundary);
         }
     }
     
@@ -249,7 +246,7 @@ export const SeeMoreFooter = styled.footer`
             font-size: 1.6rem;
             padding: 0.8rem 2rem;
 
-            border: 4px solid ${props => props.theme.borderSeeMoreButton};
+            border: 4px solid var(--color-theme);;
 
             .githubicon{
                 height: 32px;

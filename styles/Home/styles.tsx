@@ -1,10 +1,4 @@
-import { ReactNode } from 'react';
 import styled from 'styled-components';
-
-
-interface HomeProps {
-  children: ReactNode;
-}
 
 export const Container = styled.div`
   padding: 0 0.5rem;
@@ -17,7 +11,7 @@ export const Container = styled.div`
   max-width: 2000px;
 `
 
-export const Cover = styled.div<HomeProps>`
+export const Cover = styled.div`
     width: 100%;
     height: 84vh;
 
@@ -154,7 +148,7 @@ export const Cover = styled.div<HomeProps>`
     }
 `
 
-export const AboutMe = styled.div<HomeProps>`
+export const AboutMe = styled.div`
     width: 100%;
 
     padding: 1rem;
@@ -316,16 +310,6 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: space-around;
 
-  h3{
-    margin-top: 24px;
-    font-size: 0.87rem;
-    font-weight: 300;
-    color: var(--color-text-primary);
-    span{
-      color: var(--color-theme)
-    }
-  }
-
   .contact-list{
     display: flex;
     flex-direction: column;
@@ -430,5 +414,16 @@ export const Footer = styled.footer`
     .mail{
       margin-top: 0;
     }
+  }
+`
+
+export const Author = styled.h3`
+  margin-top: 24px;
+  font-size: 0.87rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-primary);
+  span{
+    color: var(--color-theme)
   }
 `
