@@ -1,7 +1,4 @@
 import { AnchorHTMLAttributes, ReactNode } from 'react'
-import Image from 'next/image';
-
-import { FaCode } from 'react-icons/fa';
 
 interface CardProps extends AnchorHTMLAttributes<HTMLAnchorElement>{
     projectName: string;
