@@ -1,16 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  max-width: 2000px;
-`
-
 export const Cover = styled.div`
     width: 100%;
     height: 84vh;
@@ -203,34 +192,7 @@ export const AboutMe = styled.div`
               text-align: left;
             }
 
-            .techs{
-              width: 100%;
-              height: auto;
 
-              margin-top: 16px;
-
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-              gap:0.4rem;
-            }
-
-            .download-cv{
-            text-decoration: none;
-            border: 2px solid var(--color-theme);
-            background: transparent;
-            color: var(--color-text-primary);
-            border-radius: 4px;
-            padding: 0.7rem;
-            margin-top: 24px;
-
-            transition: 0.4s ease-in-out;
-            
-              &:hover{
-                background-color: var(--color-theme);
-                color: var(--color-text-secundary);
-              }
-            }
         }
     }
 
@@ -282,18 +244,6 @@ export const AboutMe = styled.div`
                 
               }
 
-              .techs{
-                margin-top: 0;
-                justify-content: flex-start;
-                gap: 1rem;
-              }
-
-              .download-cv{
-                  border-width: 4px; 
-                  border-radius: 8px;
-                  font-size: 1.4rem;
-                  padding: 0.8rem 2rem;
-              }
             }
         }
     }

@@ -1,13 +1,14 @@
 import Image from 'next/image'
 
+import LayoutContainer from '../components/LayoutContainer';
 import AboutMe from '../components/AboutMe';
 import Footer from '../components/Footer';
 
-import { Container ,Cover } from '../../styles/Home/styles';
+import { Cover } from '../../styles/Home/styles';
 
 export default function Home() {
   return (
-    <Container>
+    <LayoutContainer>
       <Cover id="cover">
         <div className="title">
           <div className="content">
@@ -23,6 +24,6 @@ export default function Home() {
 
       <AboutMe/>
       <Footer/>
-    </Container>
+    </LayoutContainer>
   )
 }
