@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    
+    display: block;
+    margin: 20px;
     a{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
         padding: 0.7rem;
-        margin: 20px;
+
 
         border: 2px solid var(--color-theme);
         border-radius: 4px;
@@ -18,9 +22,22 @@ export const Container = styled.div`
 
         transition: 0.4s ease-in-out;
 
+        .icon{
+            background-color: transparent;
+            width: 26px;
+            height: 26px;
+        }
+
         &:hover{
             background-color: var(--color-theme);
             color: var(--color-text-secundary);
+        }
+    }
+
+    @media (min-width: 768px){
+        .icon{
+            height: 32px;
+            width: 32px;
         }
     }
 
