@@ -166,7 +166,6 @@ export const NavItems = styled.ul`
             font-size: 1.5rem;
             font-weight: 700;
             line-height: 0;
-            /* padding: 1.5rem 1rem; */
 
             text-decoration: none;
             text-transform: uppercase;
@@ -174,7 +173,7 @@ export const NavItems = styled.ul`
             position: relative;
             overflow:hidden;
 
-            color: ${props => props.theme.text_primary};
+            color: var(--color-text-primary);
             
             &:after{
                 content: '';
