@@ -10,5 +10,13 @@ export const Container = styled.div`
   width: 100%;
   max-width: 2000px;
   border: 1px solid green;
-  margin-top: 76px;
+  margin-top: 62px;
+
+  @media (min-width: 768px){
+    margin-top: 72px;
+  }
+
+  @media (min-width: 1024px){
+    margin-top: 75px;
+  }
 `;
