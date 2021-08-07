@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    
     a{
+        display: block;
         padding: 0.7rem;
         margin: 20px;
 
