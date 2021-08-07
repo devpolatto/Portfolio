@@ -13,7 +13,11 @@ const Projects: React.FC = () => {
         <LayoutContainer>
             <Title text="Projetos" />
             <ProjectGrid/>
-            <Button text="Ver mais projetos no Github" href="/AngeloPolatto.pdf">
+            <Button 
+                text="Ver mais projetos no Github" 
+                href="https://github.com/devpolatto?tab=repositories"
+                target="_blank"
+            >
                 <FaGithub className="icon" />
             </Button>
         </LayoutContainer>
