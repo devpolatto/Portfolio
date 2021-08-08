@@ -59,6 +59,26 @@ export const Title = styled.div`
         }
     }
 
+    .cursor{
+        display: inline-block;
+        background-color: var(--color-theme);
+        margin-left: 0.3rem;
+        width: 2px;
+        animation: blink 1s infinite;
+
+        @keyframes blink {
+            0%  { background-color: var(--color-theme); }
+            49% { background-color: var(--color-theme); }
+            50% { background-color: transparent; }
+            99% { background-color: transparent; }
+            100%  { background-color: var(--color-theme); }
+        }
+    }
+
+    .typing{
+        animation: none;
+    }
+
     h3:nth-child(2){
         margin-left:20px;
     }
@@ -91,6 +111,11 @@ export const Title = styled.div`
             margin-top: 8px;
             margin-left: 46px;
         }
+
+        .cursor{
+            height: 20px;
+        }
+
     }
 
     @media (min-width: 1440px){
