@@ -16,7 +16,7 @@ const Cover: React.FC = () => {
 
     const textArray = ["Front-end", "MERN Stack"];
     const typingDelay = 100;
-    const erasingDelay = 100;
+    const erasingDelay = 80;
     const newTextDelay = 1950; // Delay between current and next text
     let textArrayIndex = 0;
     let charIndex = 0;
@@ -48,7 +48,7 @@ const Cover: React.FC = () => {
     }
 
     useEffect(() => {
-        if(textArray.length) setTimeout(type, newTextDelay + 250)
+        if(textArray.length) setTimeout(type, 3050)
     }, [])
 
     return(

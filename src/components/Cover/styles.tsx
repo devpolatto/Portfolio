@@ -13,6 +13,8 @@ export const Container = styled.div`
 
     z-index: 0;  
 
+    /* border: 1px solid green; */
+
     @media (min-width: 1024px){
         height: 88vh;
         padding-top: 0;
@@ -35,6 +37,7 @@ export const Content = styled.div`
 `
 
 export const Title = styled.div`
+    position: relative;
 
     h1, h3{
         font-style: italic;
@@ -86,6 +89,19 @@ export const Title = styled.div`
     h3:nth-child(3){
         margin-top: 4px;
         margin-left: 40px;
+    }
+
+    * {
+        animation: showText 4s;
+
+        @keyframes showText{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
     }
 
     
@@ -144,10 +160,51 @@ export const ImagePik = styled.div`
     justify-content: center;
     width: 350px;
     height: 350px;
+    z-index: 1;
+
+    animation: adjustHeight 2.7s;
+
+    img{
+        z-index: 2;
+        position: relative;
+        animation: mymove 2.7s;
+    }
+
+    // Habilitando o Efieto apenas em dispositivos Mobile
+    @media (max-width: 768px){
+        @keyframes adjustHeight{
+            0%{
+                height: 500px;
+            }
+            100%{
+                height: 350px;
+            }
+        }
+
+        @keyframes mymove {
+            0% {
+                opacity: 0;
+                top: 150px;
+            }
+            100%{
+                opacity: 1;
+                top: 0;
+            }
+        }
+    }
 
     @media (min-width: 500px){
         width: 400px;
         height: 400px;
+
+        @keyframes adjustHeight{
+            0%{
+                height: 500px;
+            }
+            100%{
+                height: 400px;
+            }
+        }
     }
 
     @media (min-width: 1024px){
