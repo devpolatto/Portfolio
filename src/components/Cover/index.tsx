@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { FaChevronDown } from 'react-icons/fa'
 
 import { 
     Container,
     Content,
     Title,
-    ImagePik
+    ImagePik,
+    ChevronDownContainer
 } from './styles';
 
 const Cover: React.FC = () => {
@@ -16,7 +18,7 @@ const Cover: React.FC = () => {
 
     const textArray = ["Front-end", "MERN Stack"];
     const typingDelay = 100;
-    const erasingDelay = 100;
+    const erasingDelay = 80;
     const newTextDelay = 1950; // Delay between current and next text
     let textArrayIndex = 0;
     let charIndex = 0;
@@ -48,7 +50,7 @@ const Cover: React.FC = () => {
     }
 
     useEffect(() => {
-        if(textArray.length) setTimeout(type, newTextDelay + 250)
+        if(textArray.length) setTimeout(type, 3050)
     }, [])
 
     return(
@@ -66,6 +68,11 @@ const Cover: React.FC = () => {
             <ImagePik>
                 <Image src="/Developer-vector.svg" width="600" height="600" alt="vector"/>
             </ImagePik>
+            <ChevronDownContainer>
+                <FaChevronDown href="#about-me" className="ChevronDown ChevronDown1"/>
+                <FaChevronDown href="#about-me" className="ChevronDown ChevronDown2"/>
+                <FaChevronDown href="#about-me" className="ChevronDown ChevronDown3"/>
+            </ChevronDownContainer>
         </Container>
     );
 }
