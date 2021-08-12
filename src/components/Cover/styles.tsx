@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
     width: 100%;
     height: 84vh;
@@ -13,7 +14,7 @@ export const Container = styled.div`
 
     z-index: 0;  
 
-    /* border: 1px solid green; */
+    position: relative;
 
     @media (min-width: 1024px){
         height: 88vh;
@@ -216,5 +217,82 @@ export const ImagePik = styled.div`
     @media (min-width: 1300px){
         width: 600px;
         height: 600px;
+    }
+`
+
+export const ChevronDownContainer = styled.div`
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    
+    position: relative;
+
+    .ChevronDown{
+        height:36px;
+        width:36px;
+        position: absolute;
+    }
+
+
+    .ChevronDown1{
+        top: 4px;
+        animation: mydown 2s infinite;
+        animation-delay: 2.9s;
+
+        @keyframes mydown{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                color: var(--color-theme);
+            }
+            100%{
+                opacity: 0.1;
+            }
+        }
+    }
+
+    .ChevronDown2{
+        top: 20px;
+        animation: mydown 2s infinite;
+        animation-delay: 3.1s;
+
+        @keyframes mydown{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                color: var(--color-theme);
+            }
+            100%{
+                opacity: 0.1;
+            }
+        }
+    }
+
+    .ChevronDown3{
+        top: 36px;
+        animation: mydown 2s infinite;
+        animation-delay: 3.3s;
+
+        @keyframes mydown{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+                color: var(--color-theme);
+            }
+            100%{
+                opacity: 0.1;
+            }
+        }
+    }
+    
+    @media (min-width: 1024px){
+        display: none;
     }
 `

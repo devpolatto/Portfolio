@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { FaChevronDown } from 'react-icons/fa'
 
 import { 
     Container,
     Content,
     Title,
-    ImagePik
+    ImagePik,
+    ChevronDownContainer
 } from './styles';
 
 const Cover: React.FC = () => {
@@ -66,6 +68,11 @@ const Cover: React.FC = () => {
             <ImagePik>
                 <Image src="/Developer-vector.svg" width="600" height="600" alt="vector"/>
             </ImagePik>
+            <ChevronDownContainer>
+                <FaChevronDown href="#about-me" className="ChevronDown ChevronDown1"/>
+                <FaChevronDown href="#about-me" className="ChevronDown ChevronDown2"/>
+                <FaChevronDown href="#about-me" className="ChevronDown ChevronDown3"/>
+            </ChevronDownContainer>
         </Container>
     );
 }
