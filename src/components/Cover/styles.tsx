@@ -3,14 +3,16 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 84vh;
+    height: 90vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    padding-top: 24px;
+    padding-bottom: 36px;
+
+    border: 1px solid green;
 
     z-index: 0;  
 
@@ -29,8 +31,9 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;;
     align-items: center;
+    border: 1px solid red;
 
-    margin-bottom: 24px;
+    margin-bottom: 36px;
 
     @media (min-width: 1024px){
         flex: 1;
@@ -162,6 +165,8 @@ export const ImagePik = styled.div`
     width: 350px;
     height: 350px;
     z-index: 1;
+
+    border: 1px solid blue;
 
     animation: adjustHeight 1.5s;
 
