@@ -163,7 +163,7 @@ export const ImagePik = styled.div`
     height: 350px;
     z-index: 1;
 
-    animation: adjustHeight 2.7s;
+    animation: adjustHeight 1.5s;
 
     img{
         z-index: 2;
@@ -200,12 +200,22 @@ export const ImagePik = styled.div`
 
         @keyframes adjustHeight{
             0%{
-                height: 500px;
+                height: 300px;
             }
             100%{
-                height: 400px;
+                height: 600px;
             }
         }
+
+        @keyframes mymove {
+            0% {
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        
     }
 
     @media (min-width: 1024px){
