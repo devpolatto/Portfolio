@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    height: 84vh;
+    height: 90vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    padding-top: 24px;
+    padding-bottom: 36px;
 
     z-index: 0;  
 
@@ -30,7 +30,7 @@ export const Content = styled.div`
     justify-content: center;;
     align-items: center;
 
-    margin-bottom: 24px;
+    margin-bottom: 36px;
 
     @media (min-width: 1024px){
         flex: 1;
@@ -163,7 +163,7 @@ export const ImagePik = styled.div`
     height: 350px;
     z-index: 1;
 
-    animation: adjustHeight 2.7s;
+    animation: adjustHeight 1.5s;
 
     img{
         z-index: 2;
@@ -200,12 +200,22 @@ export const ImagePik = styled.div`
 
         @keyframes adjustHeight{
             0%{
-                height: 500px;
+                height: 300px;
             }
             100%{
-                height: 400px;
+                height: 600px;
             }
         }
+
+        @keyframes mymove {
+            0% {
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        
     }
 
     @media (min-width: 1024px){
@@ -222,7 +232,7 @@ export const ImagePik = styled.div`
 
 export const ChevronDownContainer = styled.div`
     width: 100%;
-    margin-top: 8px;
+    margin-top: 16px;
     display: flex;
     justify-content: center;
     
