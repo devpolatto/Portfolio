@@ -12,8 +12,6 @@ export const Container = styled.div`
 
     padding-bottom: 36px;
 
-    border: 1px solid green;
-
     z-index: 0;  
 
     position: relative;
@@ -31,7 +29,6 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;;
     align-items: center;
-    border: 1px solid red;
 
     margin-bottom: 36px;
 
@@ -166,8 +163,6 @@ export const ImagePik = styled.div`
     height: 350px;
     z-index: 1;
 
-    border: 1px solid blue;
-
     animation: adjustHeight 1.5s;
 
     img{
@@ -237,7 +232,7 @@ export const ImagePik = styled.div`
 
 export const ChevronDownContainer = styled.div`
     width: 100%;
-    margin-top: 8px;
+    margin-top: 16px;
     display: flex;
     justify-content: center;
     
