@@ -5,6 +5,7 @@ import CardProject from '../CardProject';
 import letmeaskPreview from '../../../public/letmeask.png';
 import plantmanagerPreview from '../../../public/plantmanager.png';
 import jsPreview from '../../../public/javascript.png';
+import DashlaneClone from '../../../public/DashlaneClone.png'
 
 import { Container } from './styles';
 
@@ -36,6 +37,15 @@ const ProjectGrid: React.FC = () => {
             description="This is a project developed during Next Level Week # 4."
             projectPreview={( 
                 <Image src={jsPreview} placeholder="blur" alt="imagePreview"/>
+            )}
+        />
+        <CardProject 
+            href="https://github.com/devpolatto/Dashlane-clone#readme"
+            target="_blank"
+            projectName="Dashlane"
+            description="Dashlane clone project"
+            projectPreview={( 
+                <Image src={DashlaneClone} placeholder="blur" alt="imagePreview"/>
             )}
         />
     </Container>
