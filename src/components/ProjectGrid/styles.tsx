@@ -7,11 +7,11 @@ export const Container = styled.div`
 
     overflow-y: scroll;
 
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 
-    padding: 1rem;
+    padding: 32px 16px 16px 16px;
     place-content: start; 
     
     cursor: default;
@@ -25,9 +25,6 @@ export const Container = styled.div`
     }
 
     @media (min-width: 768px){
-        place-content: start; 
-        place-items: center;
-
         margin-top: 16px;
 
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -43,21 +40,38 @@ export const Container = styled.div`
         
     }
 
-    @media (min-width: 1024px){
+    @media (min-width: 1023px){
+        width: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 46px;
+
+        align-items: center;
+
+        margin-bottom: 32px;
+
+        padding: 0 auto;
         height: 68vh; 
+        height: 100%;
+    }
+
+    @media (min-width: 1195px){
+        justify-content: flex-start;
     }
 
     @media (min-width: 1440px){
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: auto;
         max-width: 2000px;
-        height: 70vh; 
+        /* height: 100vh;  */
+    }
+
+    @media (min-width: 1780px){
+        justify-content: center;
     }
 
     @media (min-width: 2000px){
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-
-        gap: 0;
-
+        width: auto;
         ::-webkit-scrollbar{
             width: 8px;
         }
