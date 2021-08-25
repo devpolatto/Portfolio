@@ -18,7 +18,6 @@ export const Container = styled.a`
     transition: .2s ease-in-out 0s;
 
     @media (min-width: 767px){
-        width: 360px;
         height: 200px;
         border-radius: 8px;
 
