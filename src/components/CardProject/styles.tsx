@@ -28,12 +28,15 @@ export const Container = styled.a`
     }
 
     @media (min-width: 1024px){
-        width: 480px;
+        flex-direction: column;
+
+        height: 400px;
+        width: 350px;
     }
 
     @media (min-width: 1440px){
-        width: 560px;
-        height: 240px;
+        width: 400px;
+        height: 500px;
     }
 `;
 
@@ -109,14 +112,16 @@ export const ProjectPreview = styled.div`
 
     @media (min-width: 1024px){
        img{
-           width: 340px;
+           width: 380px;
+           border-radius: 8px 8px 4px 4px;
        }
     }
 
     @media (min-width: 1440px){
         width: 400px;
         img{
-            height: 240px;
+            height: 230px;
+            width: 400px;
         }
     }
 `

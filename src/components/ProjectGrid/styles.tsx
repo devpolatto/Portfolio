@@ -7,11 +7,13 @@ export const Container = styled.div`
 
     overflow-y: scroll;
 
+    border: 1px solid red;
+
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1rem;
 
-    padding: 1rem;
+    padding: 32px 16px 16px 16px;
     place-content: start; 
     
     cursor: default;
@@ -45,18 +47,17 @@ export const Container = styled.div`
 
     @media (min-width: 1024px){
         height: 68vh; 
+        height: 100%;
     }
 
     @media (min-width: 1440px){
         grid-template-columns: repeat(3, minmax(0, 1fr));
         max-width: 2000px;
-        height: 70vh; 
+        /* height: 100vh;  */
     }
 
     @media (min-width: 2000px){
         grid-template-columns: repeat(3, minmax(0, 1fr));
-
-        gap: 0;
 
         ::-webkit-scrollbar{
             width: 8px;

@@ -31,21 +31,21 @@ const ProjectGrid: React.FC = () => {
             )}
         />
         <CardProject 
-            href="https://github.com/devpolatto/Move.it_NLW4/#readme"
-            target="_blank"
-            projectName="Move.it"
-            description="This is a project developed during Next Level Week # 4."
-            projectPreview={( 
-                <Image src={jsPreview} placeholder="blur" alt="imagePreview"/>
-            )}
-        />
-        <CardProject 
             href="https://github.com/devpolatto/Dashlane-clone#readme"
             target="_blank"
             projectName="Dashlane"
             description="Dashlane clone project"
             projectPreview={( 
                 <Image src={DashlaneClone} placeholder="blur" alt="imagePreview"/>
+            )}
+        />
+        <CardProject 
+            href="https://github.com/devpolatto/Move.it_NLW4/#readme"
+            target="_blank"
+            projectName="Move.it"
+            description="This is a project developed during Next Level Week # 4."
+            projectPreview={( 
+                <Image src={jsPreview} placeholder="blur" alt="imagePreview"/>
             )}
         />
     </Container>
