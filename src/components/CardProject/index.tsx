@@ -17,11 +17,11 @@ import {
 const CardProject: React.FC<CardProps> = (props: CardProps) => {
   return(
     <Container {...props}>
+        <ProjectPreview>{props.projectPreview}</ProjectPreview>
         <ProjectDescription>
             <ProjectTitle>{props.projectName}</ProjectTitle>
             <Description>{props.description}</Description>
         </ProjectDescription>
-        <ProjectPreview>{props.projectPreview}</ProjectPreview>
     </Container>
   );
 }
