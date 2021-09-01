@@ -19,7 +19,6 @@ export const Container = styled.a`
 
     @media (min-width: 767px){
         height: 200px;
-        border-radius: 8px;
 
         &:hover{
             transform: scale(0.9);
@@ -29,14 +28,14 @@ export const Container = styled.a`
     @media (min-width: 1024px){
         flex-direction: column;
 
-        height: 400px;
-        width: 350px;
+        width: 300px;
+        height: 430px;
     }
 
-    @media (min-width: 1440px){
+    /* @media (min-width: 1440px){
         width: 400px;
         height: 500px;
-    }
+    } */
 `;
 
 export const ProjectDescription = styled.div`
@@ -66,9 +65,9 @@ export const ProjectTitle = styled.div`
         font-weight: 700;
     }
 
-    @media (min-width: 1440px){
+    /* @media (min-width: 1440px){
         font-size: 1.8rem;
-    }
+    } */
 `
 
 export const Description = styled.div`
@@ -84,19 +83,19 @@ export const Description = styled.div`
     }
 
     @media (min-width: 1440px){
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 `
 
 export const ProjectPreview = styled.div`
 
     height: 100%;
-    border-radius: 0 4px 4px 0;
+    /* border-radius: 8px; */
 
     img{
         width: 150px;
         height: 140px;
-        border-radius: 0 4px 4px 0;
+        border-radius: 8px 2px 2px 8px;
     }
 
     @media (min-width: 767px){
@@ -104,23 +103,22 @@ export const ProjectPreview = styled.div`
         img{
             width: 300px;
             height: 200px;
-            border-radius: 0 8px 8px 0;
         }
 
     }
 
     @media (min-width: 1024px){
        img{
-           width: 380px;
+           width: 300px;
            border-radius: 8px 8px 4px 4px;
        }
     }
 
-    @media (min-width: 1440px){
+    /* @media (min-width: 1440px){
         width: 400px;
         img{
-            height: 230px;
-            width: 400px;
+            height: 200px;
+            width: 340px;
         }
-    }
+    } */
 `
