@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                 </ContactMail>
             </ContactList>
             <Author>
-                Desenvolvido por <span>Angelo Polatto</span>
+                Desenvolvido por <span>Angelo Polatto</span> v1.0
             </Author>
       </Container>
   );
