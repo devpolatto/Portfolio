@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Router from 'next/router';
 import type { AppProps } from 'next/app';
 import NProgress from 'nprogress';
+import { ChakraProvider } from '@chakra-ui/react';
 
 import Header from '../components/Header';
 
@@ -26,14 +27,13 @@ Router.events.on('routeChangeError', () => {
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
-    <>
+    <ChakraProvider>
       <Head>
         <title>Polatto.dev</title>
       </Head>
       <Header/>
       <Component {...pageProps} />
-      <GlobalStyled />
-    </>
+    </ChakraProvider>
   )
 
 }
