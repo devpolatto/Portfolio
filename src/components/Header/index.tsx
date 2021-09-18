@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import NextLink from 'next/link';
+import { FaSun, FaMoon, FaBars } from 'react-icons/fa'
 import {useRouter} from 'next/router'
-import { useColorMode } from "@chakra-ui/color-mode";
+
 import { 
     Heading, 
     Flex, 
@@ -10,108 +10,103 @@ import {
     Link,
     useMediaQuery,
     Divider,
-    Text
+    Text,
+    Collapse,
+    SlideFade,
+    useDisclosure
 } from '@chakra-ui/react';
-import { Spacer, Stack, HStack } from '@chakra-ui/layout';
-import { IconButton, IconButtonProps } from '@chakra-ui/button'
-import { FaSun, FaMoon } from 'react-icons/fa'
-
-
-import { HeaderStyled, Nav, NavItems, Logo } from './styles';
+import { useColorMode } from "@chakra-ui/color-mode";
+import { HStack } from '@chakra-ui/layout';
+import { IconButton} from '@chakra-ui/button'
 
 function Header() {
-
-    const [isOpen, setIsOpen] = useState(true);
-    const [isActiveButton, setIsActiveButton] = useState(false);
-
-    function showSideBar() {
-        isOpen === false ? setIsOpen(true) : setIsOpen(false)
-        isActiveButton === true ? setIsActiveButton(false) : setIsActiveButton(true)
-    }
 
     const { colorMode, toggleColorMode } = useColorMode();
     const isDark = colorMode === "dark";
 
     const [isLargerThan768px] = useMediaQuery("(min-width: 768px)")
+    const [isLargerThan1024px] = useMediaQuery("(min-width: 1024px)")
 
     const router = useRouter()
     const isRouteHomeActive = router.pathname === '/'   
     const isRouteProjectsActive = router.pathname === '/projects'
     const isRouteAboutActive = router.pathname === '#about-me'
 
-    useEffect(() => {
-        console.log('media:' + isLargerThan768px)
-    },[isLargerThan768px])
-    
+    const { isOpen, onToggle } = useDisclosure()
+
     return (
-            <Container w="full" maxW="container.xl"py="4">
-                <Flex w="100%" align="center" justifyContent="space-between">
-                    <Heading>
-                        Polatto<span>.</span>dev
-                    </Heading>
-                    <Flex w="auto" align="center"  justifyContent="space-between" px="1">
+        <Container w="full" maxW="container.xl" py="4">
+            <Flex w="100%" align="center" justifyContent="space-between">
+                <Heading>
+                    Polatto<span>.</span>dev
+                </Heading>
+                
+                <Box w="auto" display="flex" alignItems="center" justifyContent="space-between">
+                    <Flex
+                        pos={isLargerThan1024px ? 'unset' : 'absolute'}
+                        top={isLargerThan1024px ? 'unset' : '75px'}
+                        left={isLargerThan1024px ? 'unset' : '0px'}
+                        w='full'
                         
-                        <HStack spacing={14}>
-                            <Link onClick={() => router.push('/')}>
-                                <Text
-                                    color={isRouteHomeActive && isDark  ? '#7CFFC4' : colorMode}
+                        align="center"  
+                        justifyContent={isLargerThan1024px ? 'space-between' : 'center'}
+                        px="1"
+                    >
+                        <SlideFade in={isOpen} offsetX={isLargerThan1024px ? '80px' : 'unset'} offsetY="0">
+                                             
+                            <HStack direction='row' spacing={14} mr={isLargerThan1024px ? 5 : 0}>
+                                <Link onClick={() => router.push('/')}>
+                                    <Text
+                                        color={isRouteHomeActive && isDark  ? '#7CFFC4' : colorMode}
+                                        fontSize={isLargerThan768px ? '2xl' : 'md'}
+                                        fontWeight="semibold" 
+                                        textTransform="uppercase"
+                                    >Inicio</Text>
+                                </Link>
+
+                                <Link 
+                                    color={isRouteAboutActive && isDark ? '#7CFFC4' : colorMode}
                                     fontSize={isLargerThan768px ? '2xl' : 'md'}
-                                    fontWeight="semibold" 
+                                    fontWeight="semibold"
                                     textTransform="uppercase"
-                                    // textDecorationLine="unset"
-                                    // textDecoration="unset"
-                                >Inicio</Text>
-                            </Link>
+                                    textDecorationLine="none"
+                                    textDecoration="none"
+                                    onClick={() => router.push('/#about-me')}
+                                >   Sobre Mim
+                                </Link>
 
-                            <Link 
-                                color={isRouteAboutActive && isDark ? '#7CFFC4' : colorMode}
-                                fontSize={isLargerThan768px ? '2xl' : 'md'}
-                                fontWeight="semibold"
-                                textTransform="uppercase"
-                                textDecorationLine="none"
-                                textDecoration="none"
-                                onClick={() => router.push('/#about-me')}
-                            >   Sobre Mim
-                            </Link>
+                                <Link 
+                                    color={isRouteProjectsActive  && isDark ? '#7CFFC4' : colorMode}
+                                    fontSize={isLargerThan768px ? '2xl' : 'md'}
+                                    fontWeight="semibold"
+                                    textTransform="uppercase"
+                                    onClick={() => router.push('/projects')}
+                                > Projetos
+                                </Link>
+                                <IconButton 
+                                    fontSize={20}
+                                    icon={isDark  ? <FaSun color="#7CFFC4" /> : <FaMoon />} 
+                                    isRound={true} 
+                                    variant="outline"
+                                    arial-label="Change Theme"
+                                    onClick={toggleColorMode}/>
+                            </HStack>
 
-                            <Link 
-                                color={isRouteProjectsActive  && isDark ? '#7CFFC4' : colorMode}
-                                fontSize={isLargerThan768px ? '2xl' : 'md'}
-                                fontWeight="semibold"
-                                textTransform="uppercase"
-                                onClick={() => router.push('/projects')}
-                            > Projetos
-                            </Link>
-                        </HStack>
-                        <IconButton 
-                            ml={8} 
-                            fontSize={20}
-                            icon={isDark ? <FaSun /> : <FaMoon />} 
-                            isRound={true} 
-                            variant="outline"
-                            colorScheme="teal"
-                            arial-label="Change Theme"
-                            onClick={toggleColorMode}
-                        />
+                        </SlideFade>
                     </Flex>
-                </Flex>
-            </Container>
+
+                    <IconButton 
+                        alignContent="center"
+                        justifyContent="center"
+                        fontSize={30}
+                        icon={<FaBars color={isDark ? '#F7FAFC' : '#0e0e0e'} />} 
+                        arial-label="Change Theme"
+                        onClick={onToggle}
+                    />
+                </Box>
+            </Flex>
+        </Container>
     );
 }
-
-        // <button onClick={showSideBar}>
-        //         <div id="hamburger-6" className={`hamburger ${isActiveButton === true ? 'is-active' : ''}`}>
-        //             <span className="line"></span>
-        //             <span className="line"></span>
-        //             <span className="line"></span>
-        //         </div>
-        //     </button>
-        //     <Nav sidebarHidden={isOpen} >
-        //         <NavItems >
-        //             <li onClick={showSideBar}><Link href="/" scroll>início</Link></li>
-        //             <li onClick={showSideBar}><Link href="/#about-me">Sobre mim</Link></li>
-        //             <li onClick={showSideBar}><Link href="/projects">Projetos</Link></li>
-        //         </NavItems>
-        //     </Nav>
 
 export default Header;
