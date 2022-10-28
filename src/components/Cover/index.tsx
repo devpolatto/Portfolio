@@ -66,7 +66,7 @@ const Cover: React.FC = () => {
                 </Title>
             </Content>
             <ImagePik>
-                <Image src="/Developer-vector.svg" width="600" height="600" alt="vector"/>
+                <Image src="/Developer-vector-1.svg" width="600" height="600" alt="vector"/>
             </ImagePik>
             <ChevronDownContainer>
                 <FaChevronDown href="#about-me" className="ChevronDown ChevronDown1"/>

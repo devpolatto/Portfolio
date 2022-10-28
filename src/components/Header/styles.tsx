@@ -6,10 +6,14 @@ interface HeaderStyledProps {
     children?: ReactNode;
 }
 
+export const Container = styled.div`
+    width: 100%;
+`
+
 
 export const HeaderStyled = styled.div<HeaderStyledProps>`
     width: 100%;
-    max-width: 2000px;
+    max-width: 1380px;
 
     padding: 0.5rem 1rem;  
     position: fixed;
@@ -79,6 +83,8 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
     }
 
     @media (min-width: 1024px) {
+
+        height: 66px;
         padding: 0.8rem 3rem;
 
         button{
@@ -94,17 +100,13 @@ export const Logo = styled.h2`
 
     color: var(--color-text-primary);
 
-    span{
-        color: var(--color-theme);
-    }
-
     @media (min-width: 768px){
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 `
 
 export const Nav = styled.nav<HeaderStyledProps>`
-    height: 100%;
+    height: 100vh;
     width: ${props => props.sidebarHidden === true ? '0' : '80%'};
 
     position: fixed;
@@ -114,7 +116,8 @@ export const Nav = styled.nav<HeaderStyledProps>`
     padding-top: 60px;
     overflow-x: hidden;
 
-    background-color: var(--color-sideNav);
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1.8rem);
 
     display: flex;
     flex-direction: column;
@@ -123,12 +126,18 @@ export const Nav = styled.nav<HeaderStyledProps>`
 
     transition: 0.5s ease-in-out;
 
+    overflow-y: hidden ;
+
     @media (min-width: 500px){
         width: ${props => props.sidebarHidden === true ? '0' : '50%'};
     }
 
     @media (min-width: 1024px) {
+
+        height: 100%;
         flex-direction: row;
+
+        /* border: 1px solid red; */
 
         width: auto;
         padding: 0;
@@ -145,7 +154,9 @@ export const NavItems = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+
+    padding-left: 2rem;
 
     li{
         width: auto;
@@ -153,17 +164,18 @@ export const NavItems = styled.ul`
 
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: left;
 
         a{
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            width: 144px;
+            text-align: left;
+
             height: 50px;
+            
             font-family: 'Roboto';
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             line-height: 0;
 
@@ -194,14 +206,39 @@ export const NavItems = styled.ul`
                     left: 0;
                 }
             }
+            
+            @media (min-width: 1024px) {
+                width: auto;
+                margin-top: 0;
+                font-size: 0.9rem;
+
+                &:nth-child(5){
+                    margin-top: 0;
+                }
+            }
+
+        }
+
+        &:nth-child(5){
+            margin-top: 30px;
         }
 
         @media (min-width: 768px) {
             margin-top: 0;
         }
+
+        @media (min-width: 1024px) {
+            width: auto;
+            margin-top: 0;
+            font-size: 0.9rem;
+
+            &:nth-child(5){
+                margin-top: 0;
+            }
+        }
     }
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
         gap: 10px;
         flex-direction: row;
 

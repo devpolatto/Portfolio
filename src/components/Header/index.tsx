@@ -16,7 +16,7 @@ function Header() {
     return (
         <HeaderStyled>
             <Logo className="logo">
-                Polatto<span>.</span>dev
+                Polatto
             </Logo>
             <button onClick={showSideBar}>
                 <div id="hamburger-6" className={`hamburger ${isActiveButton === true ? 'is-active' : ''}`}>
@@ -30,6 +30,8 @@ function Header() {
                     <li onClick={showSideBar}><Link href="/" scroll>início</Link></li>
                     <li onClick={showSideBar}><Link href="/#about-me">Sobre mim</Link></li>
                     <li onClick={showSideBar}><Link href="/projects">Projetos</Link></li>
+                    <li onClick={showSideBar}><Link href="#">Blog</Link></li>
+                    <li onClick={showSideBar}><Link href="#">Polatto.tec</Link></li>
                 </NavItems>
             </Nav>
         </HeaderStyled>
