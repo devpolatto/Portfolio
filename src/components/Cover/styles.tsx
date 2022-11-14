@@ -30,7 +30,7 @@ export const Content = styled.div`
     justify-content: center;;
     align-items: center;
 
-    margin-bottom: 36px;
+    margin-bottom: 20px;
 
     @media (min-width: 1024px){
         flex: 1;
@@ -39,72 +39,6 @@ export const Content = styled.div`
 
 export const Title = styled.div`
     position: relative;
-
-    h1, h3{
-        font-style: italic;
-        font-family: 'Roboto';
-    }
-
-    h1{
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 100%;
-        margin-bottom: 8px;
-        color: var(--color-theme);
-    }
-
-    h3{
-        line-height: 1rem;
-        font-weight: 500;
-        color: var(--color-text-primary);
-
-        span{
-            color: var(--color-theme);
-        }
-    }
-
-    .cursor{
-        display: inline-block;
-        background-color: var(--color-theme);
-        margin-left: 0.3rem;
-        width: 2px;
-        animation: blink 1s infinite;
-
-        @keyframes blink {
-            0%  { background-color: var(--color-theme); }
-            49% { background-color: var(--color-theme); }
-            50% { background-color: transparent; }
-            99% { background-color: transparent; }
-            100%  { background-color: var(--color-theme); }
-        }
-    }
-
-    .typing{
-        animation: none;
-    }
-
-    h3:nth-child(2){
-        margin-left:20px;
-    }
-
-    h3:nth-child(3){
-        margin-top: 4px;
-        margin-left: 40px;
-    }
-
-    * {
-        animation: showText 4s;
-
-        @keyframes showText{
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
-    }
-
     
     @media (min-width: 500px){
         h1{
@@ -116,42 +50,52 @@ export const Title = styled.div`
         }
     }
 
-    @media (min-width: 1024px){
-        margin-bottom: 0;
 
-        h3:nth-child(2){
-            margin-left: 25px;
-            margin-top: 10px;
+`
+
+export const Name = styled.h1`
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+    /* color: var(--color-text-primary); */
+    
+
+    @media (min-width: 500px){
+        h1{
+            font-size: 3.87rem;
         }
-
-        h3:nth-child(3){
-            margin-top: 8px;
-            margin-left: 46px;
-        }
-
-        .cursor{
-            height: 20px;
-        }
-
     }
 
-    @media (min-width: 1440px){
-        h1{
-            font-size: 7rem;
-        }
 
+`
+
+export const TitleStack = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    span {
+        width: 10px;
+        height: 10px;
+        background: #30FDFF;
+        transform: rotate(-135deg);
+    }
+
+`
+
+export const Skill = styled.h3`
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-text-primary);
+
+    @media (min-width: 500px){
         h3{
-            font-size: 2rem;
-        }
-
-        h3:nth-child(2){
-            margin-left: 45px;
-            margin-top: 16px;
-        }
-
-        h3:nth-child(3){
-            margin-top: 16px;
-            margin-left: 76px;
+            font-size: 1.3rem;
         }
     }
 `

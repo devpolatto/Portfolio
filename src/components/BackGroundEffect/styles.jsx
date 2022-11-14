@@ -28,5 +28,17 @@ export const Container = styled.div`
           z-index: -1;
      }
 
+     .effect-4{
+          position: fixed;
+          top: 0;
+          right: 0;
+
+          width: 100%;
+          height: 300px;
+          z-index: -1;
+
+          border: 1px solid green;
+     }
+
      
 `;

@@ -8,7 +8,10 @@ import {
     Content,
     Title,
     ImagePik,
-    ChevronDownContainer
+    ChevronDownContainer,
+    Name,
+    Skill,
+    TitleStack
 } from './styles';
 
 const Cover: React.FC = () => {
@@ -50,19 +53,21 @@ const Cover: React.FC = () => {
     }
 
     useEffect(() => {
-        if(textArray.length) setTimeout(type, 3050)
+        textArray.length && setTimeout(type, 3050)
     }, [])
 
     return(
         <Container id="cover">
             <Content>
                 <Title>
-                    <h1 className="name">Angelo Polatto</h1>
-                    <h3 className="office">Técnico de <span>TI</span> &</h3>
-                    <h3 className="office">Desenvolvedor  
-                        <span className="typed-text">{` ${typeTextSpan}`}</span>
-                        <span className={`cursor ${cursorSpan === false ? 'typing' : ''}`}>&nbsp;</span>
-                    </h3>
+                    <Name className='text-gradient'>Angelo Polatto</Name>
+                    <TitleStack>
+                        <Skill>Redes</Skill>
+                        <span></span>
+                        <Skill>MERN Stack</Skill>
+                        <span></span>
+                        <Skill>DevOps</Skill>
+                    </TitleStack>
                 </Title>
             </Content>
             <ImagePik>

@@ -35,13 +35,26 @@ export default function BackGroundEffect() {
                <defs>
                <linearGradient id="paint0_linear_1325_5564" x1="359.696" y1="339.309" x2="44" y2="185" gradientUnits="userSpaceOnUse">
                <stop stopColor="#30FDFF"/>
-               <stop offset="1" stopColor="#0B0F1A" stopCpacity="0"/>
+               <stop offset="1" stopColor="#0B0F1A" stopOpacity="0"/>
                </linearGradient>
                </defs>
                </svg>
           </div>
 
-
+          {/* <div className="back-effect effect-4">
+               <svg viewBox="0 0 645 1111" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <g filter="url(#filter0_f_1324_4543)">
+               <path d="M232.334 845.383C293.362 911.669 542.346 879.418 542.346 879.418C248.583 771.82 310.014 738.573 233.976 556.781C219.106 521.228 163.933 488.192 116.124 467.278C45.3489 436.317 -1.4763 425.837 -80.0002 400.028C132.192 608.393 171.305 779.097 232.334 845.383Z" fill="#30FDFF" fillOpacity="0.26"/>
+               </g>
+               <defs>
+               <filter id="filter0_f_1324_4543" x="-480" y="0.0282135" width="1422.35" height="1287.23" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+               <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+               <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+               <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_1324_4543"/>
+               </filter>
+               </defs>
+               </svg>
+          </div> */}
 
      </Container>
   )

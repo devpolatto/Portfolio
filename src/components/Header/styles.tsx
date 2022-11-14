@@ -35,7 +35,7 @@ export const HeaderStyled = styled.div<HeaderStyledProps>`
         .hamburger .line{
             width: 35px;
             height: 5px;
-            background-color: var(--color-text-primary);
+            background-color: #30FDFF;
             display: block;
             margin: 8px auto;
             -webkit-transition: all 0.3s ease-in-out;
@@ -98,7 +98,7 @@ export const Logo = styled.h2`
     font-size: 1.5rem;
     line-height: 1rem;
 
-    color: var(--color-text-primary);
+    color: #30FDFF;
 
     @media (min-width: 768px){
         font-size: 1.4rem;
@@ -211,6 +211,8 @@ export const NavItems = styled.ul`
                 width: auto;
                 margin-top: 0;
                 font-size: 0.9rem;
+
+                color: #30FDFF;
 
                 &:nth-child(5){
                     margin-top: 0;

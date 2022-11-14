@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <HeaderStyled>
-            <Logo className="logo">
+            <Logo>
                 Polatto
             </Logo>
             <button onClick={showSideBar}>
